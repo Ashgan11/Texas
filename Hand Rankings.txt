@@ -1,0 +1,12 @@
+Best to Worst
+
+1. 5-Sequence	| Highest Start		| Same Suit
+2. 5-Sequence	| Any Start		| Same Suit
+3. No Sequence	| 4 Cards		| Same Rank
+4. No Sequence	| 3 Cards & 2 Cards	| Same Rank for both sets
+5. No Sequence	| 5 Cards		| Same Suit
+6. 5-Sequence	| Any Start		| Any Suit
+7. No Sequence	| 3 Cards		| Same Rank
+8. No Sequence	| 2 Cards & 2 Cards	| Same Rank
+9. No Sequence	| 2 Cards		| Same Rank
+10.No Sequence	| 1 Card -> Own Value

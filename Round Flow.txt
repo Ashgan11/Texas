@@ -1,0 +1,39 @@
+Init:
+"Button" to random player
+Player "left" of button: small blind (1)
+Next player: big blind (2)
+Deal 1 card to small blind, then next player player
+do until all have 2 cards
+
+Round 1 (preflop)
+start: player left of big blind
+options: call, raise, fold
+	call: bid = big blind
+	raise: bid = [2x big blind .. total cash]
+	fold: retire from match, forfeit bid
+do until all players acted
+
+Round 2 (flop)
+Reveal 3 community cards
+start: left of button
+options: call, raise, fold, check
+	check: pass round to next player
+do until all players acted
+
+Round 3 (turn)
+Reveal 1 community card
+start: left of button
+do until all players acted
+
+Round 4 (river)
+Reveal 1 community card
+start: left of button
+do until all players acted
+
+Showdown
+Players reveal their hole cards
+Players pick their five-card set
+Evaluate all players' strength
+Highest strength wins the pot
+Tie-breaker:
+Same score = split pot

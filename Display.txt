@@ -1,0 +1,80 @@
+--Card--
+[10 S] [4 H] [ ? ]
+KNOWN:		[ + Rank + Space + Suit + ]
+UNKNOWN:	[ + Space + ? + Space + ]
+
+Ranks:
+2
+3
+4
+5
+6
+7
+8
+9
+10
+J
+Q
+K
+A
+
+Suits:
+S	Spades
+C	Clubs
+H	Hearts
+D	Diamonds
+
+--Display (As player 3)--
+
+ROUND 1 - Pre-Flop
+------------------
+
+Community Cards: [R S] [R S] [R S] [R S] [R S]
+Big Blind: 2
+Pot: 9
+
+Player 1 | Stack: 7 | Bet: 3
+FOLD
+
+Player 2 | Stack: 7 | Bet: 3
+[ ? ] [ ? ]
+
+Player 3 | Stack: 7 | Bet: 3
+[R S] [R S]
+
+Options:
+Call
+Raise N
+Fold
+Check
+Peek
+
+Player 3: (type input)
+(Error placeholder)
+
+--Notes--
+Top player starts (assumed: last player has the "button")
+
+--Commands--
+Call
+Raise N
+Fold
+Check
+Peek (Shows your own hold cards)
+All In (Raise entire stack if possible)
+Pick N N N N N (showdown - select cards you want to build)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
