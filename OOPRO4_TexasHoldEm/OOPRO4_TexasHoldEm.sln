@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OOPRO4_TexasHoldEm", "OOPRO4_TexasHoldEm.vcxproj", "{01EB1D21-7916-415F-A7F7-AFB2F3207302}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01EB1D21-7916-415F-A7F7-AFB2F3207302}.Debug|x64.ActiveCfg = Debug|x64
+		{01EB1D21-7916-415F-A7F7-AFB2F3207302}.Debug|x64.Build.0 = Debug|x64
+		{01EB1D21-7916-415F-A7F7-AFB2F3207302}.Debug|x86.ActiveCfg = Debug|Win32
+		{01EB1D21-7916-415F-A7F7-AFB2F3207302}.Debug|x86.Build.0 = Debug|Win32
+		{01EB1D21-7916-415F-A7F7-AFB2F3207302}.Release|x64.ActiveCfg = Release|x64
+		{01EB1D21-7916-415F-A7F7-AFB2F3207302}.Release|x64.Build.0 = Release|x64
+		{01EB1D21-7916-415F-A7F7-AFB2F3207302}.Release|x86.ActiveCfg = Release|Win32
+		{01EB1D21-7916-415F-A7F7-AFB2F3207302}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58A4A5E4-8C28-4E61-9513-C6AEE425D093}
+	EndGlobalSection
+EndGlobal

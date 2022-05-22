@@ -4,24 +4,25 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>200</y>
+      <x>210</x>
+      <y>210</y>
       <w>120</w>
-      <h>90</h>
+      <h>100</h>
     </coordinates>
     <panel_attributes>Card
 -
-+rank: char
-+suit: char
++Rank: rank
++Suit: suit
 -
-+toString(): string</panel_attributes>
++toString(): string
++getValue(): int</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>310</y>
+      <x>210</x>
+      <y>330</y>
       <w>140</w>
       <h>170</h>
     </coordinates>
@@ -41,8 +42,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>280</x>
-      <y>450</y>
+      <x>490</x>
+      <y>470</y>
       <w>360</w>
       <h>230</h>
     </coordinates>
@@ -64,8 +65,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>500</y>
+      <x>970</x>
+      <y>780</y>
       <w>130</w>
       <h>30</h>
     </coordinates>
@@ -75,8 +76,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>260</x>
-      <y>720</y>
+      <x>470</x>
+      <y>740</y>
       <w>140</w>
       <h>140</h>
     </coordinates>
@@ -94,8 +95,8 @@
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>650</x>
-      <y>450</y>
+      <x>860</x>
+      <y>470</y>
       <w>190</w>
       <h>50</h>
     </coordinates>
@@ -106,9 +107,9 @@ players.back() = button</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>650</x>
-      <y>510</y>
-      <w>190</w>
+      <x>860</x>
+      <y>530</y>
+      <w>250</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>dealCard()
@@ -119,9 +120,9 @@ adds returned card to dealtCards</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>410</x>
-      <y>720</y>
-      <w>190</w>
+      <x>620</x>
+      <y>740</y>
+      <w>330</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>verifyInput() returns string if valid, exception if not</panel_attributes>
@@ -130,8 +131,8 @@ adds returned card to dealtCards</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>320</x>
-      <y>970</y>
+      <x>530</x>
+      <y>990</y>
       <w>160</w>
       <h>50</h>
     </coordinates>
@@ -143,8 +144,8 @@ adds returned card to dealtCards</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>390</x>
-      <y>1010</y>
+      <x>600</x>
+      <y>1030</y>
       <w>30</w>
       <h>80</h>
     </coordinates>
@@ -154,8 +155,8 @@ adds returned card to dealtCards</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>180</x>
-      <y>1140</y>
+      <x>390</x>
+      <y>1160</y>
       <w>140</w>
       <h>50</h>
     </coordinates>
@@ -167,8 +168,8 @@ adds returned card to dealtCards</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>330</x>
-      <y>1140</y>
+      <x>540</x>
+      <y>1160</y>
       <w>140</w>
       <h>50</h>
     </coordinates>
@@ -180,8 +181,8 @@ adds returned card to dealtCards</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>480</x>
-      <y>1140</y>
+      <x>690</x>
+      <y>1160</y>
       <w>140</w>
       <h>50</h>
     </coordinates>
@@ -193,8 +194,8 @@ adds returned card to dealtCards</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>240</x>
-      <y>1060</y>
+      <x>450</x>
+      <y>1080</y>
       <w>330</w>
       <h>30</h>
     </coordinates>
@@ -204,8 +205,8 @@ adds returned card to dealtCards</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>390</x>
-      <y>1060</y>
+      <x>600</x>
+      <y>1080</y>
       <w>30</w>
       <h>100</h>
     </coordinates>
@@ -215,8 +216,8 @@ adds returned card to dealtCards</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>240</x>
-      <y>1060</y>
+      <x>450</x>
+      <y>1080</y>
       <w>30</w>
       <h>100</h>
     </coordinates>
@@ -226,8 +227,8 @@ adds returned card to dealtCards</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>540</x>
-      <y>1060</y>
+      <x>750</x>
+      <y>1080</y>
       <w>30</w>
       <h>100</h>
     </coordinates>
@@ -237,20 +238,20 @@ adds returned card to dealtCards</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>410</x>
-      <y>760</y>
-      <w>190</w>
+      <x>620</x>
+      <y>780</y>
+      <w>220</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>handleRound is state pattern</panel_attributes>
+    <panel_attributes>handleRound is strategy pattern</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>650</x>
-      <y>580</y>
-      <w>190</w>
+      <x>860</x>
+      <y>600</y>
+      <w>330</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>isGameOver returns true if all but 1 player folded</panel_attributes>
@@ -259,8 +260,8 @@ adds returned card to dealtCards</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>140</x>
-      <y>200</y>
+      <x>350</x>
+      <y>220</y>
       <w>250</w>
       <h>30</h>
     </coordinates>
@@ -270,8 +271,8 @@ adds returned card to dealtCards</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>170</x>
-      <y>270</y>
+      <x>380</x>
+      <y>290</y>
       <w>180</w>
       <h>120</h>
     </coordinates>
@@ -286,8 +287,8 @@ adds returned card to dealtCards</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>360</x>
-      <y>270</y>
+      <x>570</x>
+      <y>290</y>
       <w>250</w>
       <h>30</h>
     </coordinates>
@@ -297,8 +298,8 @@ adds returned card to dealtCards</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>20</x>
-      <y>10</y>
+      <x>230</x>
+      <y>30</y>
       <w>220</w>
       <h>70</h>
     </coordinates>
@@ -311,13 +312,74 @@ winningHand
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>250</x>
-      <y>10</y>
+      <x>460</x>
+      <y>30</y>
       <w>250</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>Customize enum values so that
 number = score worth</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>50</x>
+      <y>230</y>
+      <w>140</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>rank &amp; suit enums</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>110</y>
+      <w>220</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+rank
+-
+{Two, Three, ... Jack, Queen, ...}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>110</y>
+      <w>220</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+suit
+-
+{Spades, Hearts, ...}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>290</x>
+      <y>650</y>
+      <w>130</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Game</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>220</x>
+      <y>690</y>
+      <w>270</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Game is just a wrapper for MVC (clean)</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

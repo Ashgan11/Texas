@@ -17,7 +17,8 @@ Round 2 (flop)
 Reveal 3 community cards
 start: left of button
 options: call, raise, fold, check
-	check: pass round to next player
+	check: pass round to next player (ONLY works if nobody has called or raised in this round)
+	Cycle continues until all players have either called, raised or folded
 do until all players acted
 
 Round 3 (turn)
