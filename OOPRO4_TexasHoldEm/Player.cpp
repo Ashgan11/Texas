@@ -11,6 +11,11 @@ Player::Player(std::string name, int stakes)
     stack = stakes;
 }
 
+std::string Player::getName()
+{
+    return name;
+}
+
 player::playerFlag Player::getPlayerFlag()
 {
     return flag;

@@ -5,6 +5,11 @@ PokerView::PokerView(PokerModel* m)
 	model = m;
 }
 
+void PokerView::displayEmptyLine()
+{
+	cout << "\n";
+}
+
 void PokerView::displayStart()
 {
 	cout << "Welcome to Texas Hold 'Em Poker! \n\n";
@@ -42,12 +47,12 @@ void PokerView::displayTable()
 	cout << "------------------\n\n";
 	cout << "Community Cards: ";
 	for (int i = 0; i < 5; i++) cout << model->getCommunityCard(i).toString() + " ";
-	cout << "Highest Bid: " + to_string(model->getHighestBet()) + "\n\n";
-	for (int i = 0; i < model->getPlayerCount(); i++) model->getPlayer(i).toString() + "\n\n";
+	cout << "\nHighest Bid: " + to_string(model->getHighestBet()) + "\n\n";
+	for (int i = 0; i < model->getPlayerCount(); i++) cout << model->getPlayer(i).toString();
 }
 
 void PokerView::displayPlayerOptions()
-{
+{	
 	cout << "Options:\n";
 	cout << "Call\n";
 	cout << "Raise #\n";
@@ -55,7 +60,8 @@ void PokerView::displayPlayerOptions()
 	cout << "Fold\n";
 	cout << "Check\n";
 	cout << "Peek\n\n";
-	cout << "Player" + to_string(model->getCurrentPlayerNumber()) + ": ";
+	cout << model->getPlayer(model->getCurrentPlayerNumber()).getName() + ": ";
+	cout << "\n";
 }
 
 void PokerView::displayPromptPlayerNumber()
@@ -76,7 +82,7 @@ void PokerView::displayPromptStakes()
 void PokerView::displayPostBlinds()
 {
 	int bigBlind = model->getHighestBet();
-	cout << "Small Blind: " + to_string(bigBlind / 2) + "\nBig Blind: " + to_string(bigBlind) + "\n";
+	cout << "Small Blind: " + to_string(bigBlind / 2) + "\nBig Blind: " + to_string(bigBlind) + "\n\n";
 }
 
 void PokerView::displayPlayerHole()
@@ -93,4 +99,5 @@ void PokerView::displayWinner()
 void PokerView::displayException(exception e)
 {
 	cout << e.what();
+	cout << "\n";
 }

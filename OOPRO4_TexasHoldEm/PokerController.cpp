@@ -32,6 +32,7 @@ void PokerController::playerSetup()
 		try {
 			std::string input;
 			cin >> input;
+			view->displayEmptyLine();
 			if (isNumber(input)) {
 				int playerNumber = stoi(input);
 				if (playerNumber > maxAllowedPlayers) throw invalid_argument("You cannot have more than 10 players!");
@@ -39,6 +40,7 @@ void PokerController::playerSetup()
 				for (int i = 0; i < playerNumber; i++) {
 					view->displayPromptPlayerName();
 					cin >> input;
+					view->displayEmptyLine();
 					model->addPlayer(input, defaultStakes);
 				}
 				model->shufflePlayers();
@@ -60,6 +62,7 @@ void PokerController::tableStakes()
 		try {
 			std::string input;
 			cin >> input;
+			view->displayEmptyLine();
 			if (isNumber(input)) {
 				int stakes = stoi(input);
 				if (stakes < 10) throw invalid_argument("The stakes cannot be smaller than 10!");
@@ -89,6 +92,10 @@ void PokerController::bettingRound()
 	while (!model->allPlayersFinished()) {
 		userInput();
 	}
+}
+
+void PokerController::showDown()
+{
 }
 
 void PokerController::userInput()

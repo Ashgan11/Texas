@@ -10,6 +10,7 @@ private:
 	PokerModel* model;
 public:
 	PokerView(PokerModel* m);
+	void displayEmptyLine();
 	void displayStart();
 	void displayTable();
 	void displayPlayerOptions();

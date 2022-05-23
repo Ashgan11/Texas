@@ -12,7 +12,7 @@ private:
 	int gameState = 0;
 	int round = -1;
 	int highestBet = 0;
-	std::list<Player>::iterator currentPlayer;
+	std::list<Player>::iterator currentPlayer = players.begin();
 
 	Card dealCard();
 	bool doesCardExist(Card card);

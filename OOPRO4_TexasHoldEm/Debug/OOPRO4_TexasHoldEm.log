@@ -1,15 +1,3 @@
-﻿  OOPRO4_TexasHoldEm.cpp
-  Player.cpp
-  PokerController.cpp
-  PokerGame.cpp
-  PokerModel.cpp
+﻿  PokerModel.cpp
 F:\User Data\Desktop\BTS\Semester 4\OPRO\Texas\OOPRO4_TexasHoldEm\PokerModel.cpp(35,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  PokerView.cpp
-F:\User Data\Desktop\BTS\Semester 4\OPRO\Texas\OOPRO4_TexasHoldEm\PokerView.cpp(46,83): warning C4834: discarding return value of function with 'nodiscard' attribute
-  Generating Code...
-Player.obj : error LNK2019: unresolved external symbol "public: __thiscall Card::Card(void)" (??0Card@@QAE@XZ) referenced in function "public: __thiscall Player::Player(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,int)" (??0Player@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z)
-Player.obj : error LNK2019: unresolved external symbol "public: __thiscall Hand::Hand(void)" (??0Hand@@QAE@XZ) referenced in function "public: __thiscall Player::Player(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,int)" (??0Player@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z)
-PokerController.obj : error LNK2019: unresolved external symbol "public: void __thiscall PokerModel::shufflePlayers(void)" (?shufflePlayers@PokerModel@@QAEXXZ) referenced in function "private: void __thiscall PokerController::playerSetup(void)" (?playerSetup@PokerController@@AAEXXZ)
-PokerController.obj : error LNK2019: unresolved external symbol "private: void __thiscall PokerController::showDown(void)" (?showDown@PokerController@@AAEXXZ) referenced in function "public: void __thiscall PokerController::playGame(void)" (?playGame@PokerController@@QAEXXZ)
-PokerModel.obj : error LNK2019: unresolved external symbol "public: bool __thiscall Card::operator==(class Card const &)" (??8Card@@QAE_NABV0@@Z) referenced in function "private: bool __thiscall PokerModel::doesCardExist(class Card)" (?doesCardExist@PokerModel@@AAE_NVCard@@@Z)
-F:\User Data\Desktop\BTS\Semester 4\OPRO\Texas\OOPRO4_TexasHoldEm\Debug\OOPRO4_TexasHoldEm.exe : fatal error LNK1120: 5 unresolved externals
+  OOPRO4_TexasHoldEm.vcxproj -> F:\User Data\Desktop\BTS\Semester 4\OPRO\Texas\OOPRO4_TexasHoldEm\Debug\OOPRO4_TexasHoldEm.exe

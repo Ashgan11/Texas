@@ -3,7 +3,7 @@
 Card PokerModel::dealCard()
 {
     while (true) {
-        Card newCard(static_cast<Cards::rank>(randomNumber(14)), static_cast<Cards::suit>(randomNumber(5)));
+        Card newCard(static_cast<Cards::rank>(randomNumber(12)+2), static_cast<Cards::suit>(randomNumber(4)));
         if (!doesCardExist(newCard)) {
             dealtCards.push_back(newCard);
             return newCard;
@@ -107,6 +107,7 @@ void PokerModel::resetPlayerFlags()
         if (it->getPlayerFlag() != player::Fold) it->setPlayerFlag(player::Unfinished);
     }
     currentPlayer = players.begin();
+    round++;
 }
 
 void PokerModel::checkFolds()
@@ -139,6 +140,10 @@ void PokerModel::setStakes(int stakes) {
     }
 }
 
+void PokerModel::shufflePlayers()
+{
+}
+
 void PokerModel::playerCall() {
     currentPlayer->addBet(highestBet);
     currentPlayer->setPlayerFlag(player::Finished);
@@ -150,6 +155,7 @@ void PokerModel::playerRaise(int amount) {
     else currentPlayer->addBet(amount);
     currentPlayer->setPlayerFlag(player::Finished);
     advanceCurrentPlayer();
+    highestBet = amount;
 }
 
 void PokerModel::playerFold() {
@@ -175,8 +181,6 @@ void PokerModel::playerPick(int picks[5]) {
 }
 
 void PokerModel::playerPostBlinds() {
-    currentPlayer->addBet(1);
-    advanceCurrentPlayer();
-    currentPlayer->addBet(2);
-    advanceCurrentPlayer();
+    playerRaise(1);
+    playerRaise(2);
 }

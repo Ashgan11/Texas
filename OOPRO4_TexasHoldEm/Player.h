@@ -32,6 +32,8 @@ private:
 public:
 	Player(std::string name, int stakes);
 
+	std::string getName();
+
 	player::playerFlag getPlayerFlag();
 	void setPlayerFlag(player::playerFlag newFlag);
 
