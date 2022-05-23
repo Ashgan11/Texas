@@ -37,13 +37,40 @@ namespace Cards {
 		Clubs,
 		Diamonds
 	};
+	static const char* rankNames[] = {
+		"",
+		"",
+		"2 ",
+		"3 ",
+		"4 ",
+		"5 ",
+		"6 ",
+		"7 ",
+		"8 ",
+		"9 ",
+		"10",
+		"J ",
+		"Q ",
+		"K ",
+		"A "
+	};
+	static const char* suitNames[] = {
+		"S",
+		"H",
+		"C",
+		"D"
+	};
+	std::string rankToString(rank r);
+	std::string suitToString(suit r);
 }
 
 class Card {
 private:
 	Cards::rank Rank;
 	Cards::suit Suit;
+	bool isHidden = false;
 public:
+	Card();
 	Card(Cards::rank r, Cards::suit s);
 	std::string toString();
 	int getValue();
@@ -59,6 +86,7 @@ class Hand {
 public:
 	std::list<Card> cards;
 
+	Hand();
 	Hand(Card[5]);
 	std::string toString();
 	int getValue();

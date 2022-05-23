@@ -15,15 +15,23 @@ private:
 	std::list<Player>::iterator currentPlayer;
 
 	Card dealCard();
+	bool doesCardExist(Card card);
 	void advanceCurrentPlayer();
 	bool isFoldLegal();
 public:
+	PokerModel();
+	int randomNumber(int max);
 	int getGameState();
 	int getRound();
 	int getPlayerCount();
+	int getHighestBet();
+	Player getPlayer(int index);
+	int getCurrentPlayerNumber();
+	Card getCommunityCard(int index);
 	bool allPlayersFinished();
 
-	void resetPlayerFlags(); //Must reset currentPlayer to begin of list
+	void resetPlayerFlags();
+	void checkFolds();
 
 	void addPlayer(std::string name, int stakes);
 	void setStakes(int stakes);

@@ -2,19 +2,23 @@
 #include "CardAndHand.h"
 #pragma once
 
-enum playerFlag {
-	Unfinished,
-	Finished,
-	Check,
-	Fold
-};
+namespace player {
+	enum playerFlag {
+		Unfinished,
+		Finished,
+		Check,
+		Fold
+	};
 
-static const char* playerFlag_str[] = {
-	"Unfinished",
-	"Finished",
-	"Check",
-	"Fold"
-};
+	static const char* playerFlag_str[] = {
+		"Unfinished",
+		"Finished",
+		"Check",
+		"Fold"
+	};
+}
+
+std::string flagToString(int flagVal);
 
 class Player
 {
@@ -22,21 +26,22 @@ private:
 	std::string name;
 	int stack;
 	int bet;
-	Card hole[5];
+	Card hole[2];
 	Hand hand;
-	playerFlag flag;
+	player::playerFlag flag;
 public:
-	Player();
 	Player(std::string name, int stakes);
 
-	playerFlag getPlayerFlag();
-	void setPlayerFlag(playerFlag newFlag);
+	player::playerFlag getPlayerFlag();
+	void setPlayerFlag(player::playerFlag newFlag);
 
 	int getStack();
 	void setStake(int newStake);	
 
 	int getCurBet();
 	void addBet(int value);	
+
+	void setHole(Card card, int index);
 
 	std::string toString();
 };

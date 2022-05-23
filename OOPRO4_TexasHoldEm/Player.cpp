@@ -1,7 +1,7 @@
 #include "Player.h"
 
 std::string flagToString(int flagVal) {
-    std::string tmp(playerFlag_str[flagVal]);
+    std::string tmp(player::playerFlag_str[flagVal]);
     return tmp;
 }
 
@@ -11,12 +11,12 @@ Player::Player(std::string name, int stakes)
     stack = stakes;
 }
 
-playerFlag Player::getPlayerFlag()
+player::playerFlag Player::getPlayerFlag()
 {
     return flag;
 }
 
-void Player::setPlayerFlag(playerFlag newFlag)
+void Player::setPlayerFlag(player::playerFlag newFlag)
 {
     flag = newFlag;
 }
@@ -45,9 +45,14 @@ void Player::addBet(int value)
     }
 }
 
+void Player::setHole(Card card, int index)
+{
+    hole[index] = card;
+}
+
 std::string Player::toString()
 {
     std::string output;
-    output += name + " | Stack: " + std::to_string(stack) + " | Bet: " + std::to_string(bet) + "\n" + flagToString(flag) + "\n\n";
+    output += name + " | Stack: " + std::to_string(stack) + " | Bet: " + std::to_string(bet) + "\n" + flagToString(static_cast<int>(flag)) + "\n\n";
     return output;
 }
