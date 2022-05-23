@@ -23,8 +23,11 @@ public:
 	playerFlag getPlayerFlag();
 	void setPlayerFlag(playerFlag newFlag);
 
-	void setStake(int newStake);
+	int getStack();
+	void setStake(int newStake);	
 
-	void bet(int value);
+	int getCurBet();
+	void addBet(int value);	
+
 	std::string toString();
 };

@@ -11,9 +11,12 @@ private:
 	std::list<Card> communityCards;
 	int gameState = 0;
 	int round = -1;
-	Player* currentPlayer;
+	int highestBet = 0;
+	std::list<Player>::iterator currentPlayer;
 
 	Card dealCard();
+	void advanceCurrentPlayer();
+	bool isFoldLegal();
 public:
 	int getGameState();
 	int getRound();
@@ -31,7 +34,6 @@ public:
 	void playerRaise(int amount);
 	void playerFold();
 	void playerCheck();
-	void playerPeek();
 	void playerAllIn();
 	void playerPick(int picks[5]);
 	void playerPostBlinds();

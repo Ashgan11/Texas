@@ -17,6 +17,7 @@ public:
 	void displayPromptPlayerName();
 	void displayPromptStakes();
 	void displayPostBlinds();
+	void displayPlayerHole();
 	void displayWinner();
 	void displayException(exception e);
 };

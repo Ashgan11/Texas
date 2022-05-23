@@ -43,7 +43,7 @@ private:
 	Cards::rank Rank;
 	Cards::suit Suit;
 public:
-	Card();
+	Card(Cards::rank r, Cards::suit s);
 	std::string toString();
 	int getValue();
 

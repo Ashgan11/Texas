@@ -133,8 +133,8 @@ void PokerController::userInput()
 				valid = true;
 			}
 			if (input == "Peek" || input == "peek") {
-				model->playerPeek();
-				valid = true;
+				view->displayPlayerHole();
+				//No valid flag because we don't want to end the turn
 			}
 			if (input == "All In" || input == "all in") {
 				model->playerAllIn();
