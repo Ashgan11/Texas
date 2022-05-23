@@ -1,5 +1,6 @@
 #include <iostream>
 #include <list>
+#include <string>
 #pragma once
 
 namespace Cards {

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>5</zoom_level>
+  <zoom_level>2</zoom_level>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>670</x>
-      <y>280</y>
-      <w>295</w>
-      <h>460</h>
+      <x>658</x>
+      <y>398</y>
+      <w>118</w>
+      <h>184</h>
     </coordinates>
     <panel_attributes>Controller
 valign=top</panel_attributes>
@@ -16,10 +16,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>375</x>
-      <y>265</y>
-      <w>195</w>
-      <h>280</h>
+      <x>540</x>
+      <y>392</y>
+      <w>78</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>View
 valign=top</panel_attributes>
@@ -28,10 +28,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>1160</x>
-      <y>280</y>
-      <w>220</w>
-      <h>460</h>
+      <x>854</x>
+      <y>398</y>
+      <w>88</w>
+      <h>184</h>
     </coordinates>
     <panel_attributes>Model
 valign=top</panel_attributes>
@@ -40,10 +40,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>670</x>
-      <y>260</y>
-      <w>710</w>
-      <h>480</h>
+      <x>658</x>
+      <y>390</y>
+      <w>284</w>
+      <h>192</h>
     </coordinates>
     <panel_attributes>playGame()
 valign=top</panel_attributes>
@@ -52,10 +52,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>750</x>
-      <y>300</y>
-      <w>10</w>
-      <h>10</h>
+      <x>690</x>
+      <y>406</y>
+      <w>4</w>
+      <h>4</h>
     </coordinates>
     <panel_attributes>type=initial</panel_attributes>
     <additional_attributes/>
@@ -63,10 +63,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>730</x>
-      <y>340</y>
-      <w>50</w>
-      <h>20</h>
+      <x>682</x>
+      <y>422</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>initGame()</panel_attributes>
     <additional_attributes/>
@@ -74,10 +74,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>750</x>
-      <y>305</y>
-      <w>15</w>
-      <h>45</h>
+      <x>690</x>
+      <y>408</y>
+      <w>6</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
@@ -85,10 +85,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>745</x>
-      <y>390</y>
-      <w>20</w>
-      <h>20</h>
+      <x>688</x>
+      <y>442</y>
+      <w>8</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>type=decision</panel_attributes>
     <additional_attributes/>
@@ -96,10 +96,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>750</x>
-      <y>355</y>
-      <w>15</w>
-      <h>45</h>
+      <x>690</x>
+      <y>428</y>
+      <w>6</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
@@ -107,10 +107,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>730</x>
-      <y>540</y>
-      <w>50</w>
-      <h>20</h>
+      <x>682</x>
+      <y>502</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>bettingRound()</panel_attributes>
     <additional_attributes/>
@@ -118,10 +118,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>760</x>
-      <y>395</y>
-      <w>610</w>
-      <h>45</h>
+      <x>694</x>
+      <y>444</y>
+      <w>244</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 while gameState() == 0 &amp;&amp; getRound() &lt; 4</panel_attributes>
@@ -130,10 +130,10 @@ while gameState() == 0 &amp;&amp; getRound() &lt; 4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>700</x>
-      <y>395</y>
-      <w>55</w>
-      <h>165</h>
+      <x>670</x>
+      <y>444</y>
+      <w>22</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>90.0;10.0;10.0;10.0;10.0;310.0;60.0;310.0</additional_attributes>
@@ -141,10 +141,10 @@ while gameState() == 0 &amp;&amp; getRound() &lt; 4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>750</x>
-      <y>405</y>
-      <w>125</w>
-      <h>145</h>
+      <x>690</x>
+      <y>448</y>
+      <w>50</w>
+      <h>58</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 else</panel_attributes>
@@ -153,10 +153,10 @@ else</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1195</x>
-      <y>430</y>
-      <w>65</w>
-      <h>25</h>
+      <x>868</x>
+      <y>458</y>
+      <w>26</w>
+      <h>10</h>
     </coordinates>
     <panel_attributes>getGameState()</panel_attributes>
     <additional_attributes/>
@@ -164,10 +164,10 @@ else</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1195</x>
-      <y>455</y>
-      <w>65</w>
-      <h>25</h>
+      <x>868</x>
+      <y>468</y>
+      <w>26</w>
+      <h>10</h>
     </coordinates>
     <panel_attributes>getRound()</panel_attributes>
     <additional_attributes/>
@@ -175,10 +175,10 @@ else</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>750</x>
-      <y>475</y>
-      <w>490</w>
-      <h>75</h>
+      <x>690</x>
+      <y>476</y>
+      <w>196</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;130.0;10.0;60.0;960.0;60.0;960.0;10.0</additional_attributes>
@@ -186,10 +186,10 @@ else</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>840</x>
-      <y>620</y>
-      <w>50</w>
-      <h>20</h>
+      <x>726</x>
+      <y>534</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>showDown()</panel_attributes>
     <additional_attributes/>
@@ -197,10 +197,10 @@ else</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>855</x>
-      <y>540</y>
-      <w>20</w>
-      <h>20</h>
+      <x>732</x>
+      <y>502</y>
+      <w>8</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>type=decision</panel_attributes>
     <additional_attributes/>
@@ -208,10 +208,10 @@ else</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>870</x>
-      <y>545</y>
-      <w>435</w>
-      <h>85</h>
+      <x>738</x>
+      <y>504</y>
+      <w>174</w>
+      <h>34</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getGameState() == 0</panel_attributes>
@@ -220,10 +220,10 @@ getGameState() == 0</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1195</x>
-      <y>620</y>
-      <w>65</w>
-      <h>25</h>
+      <x>868</x>
+      <y>534</y>
+      <w>26</w>
+      <h>10</h>
     </coordinates>
     <panel_attributes>getGameState()</panel_attributes>
     <additional_attributes/>
@@ -231,10 +231,10 @@ getGameState() == 0</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>885</x>
-      <y>625</y>
-      <w>320</w>
-      <h>15</h>
+      <x>744</x>
+      <y>536</y>
+      <w>128</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;620.0;10.0</additional_attributes>
@@ -242,10 +242,10 @@ getGameState() == 0</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1040</x>
-      <y>675</y>
-      <w>50</w>
-      <h>20</h>
+      <x>806</x>
+      <y>556</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>displayWinner()</panel_attributes>
     <additional_attributes/>
@@ -253,10 +253,10 @@ getGameState() == 0</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>860</x>
-      <y>635</y>
-      <w>215</w>
-      <h>50</h>
+      <x>734</x>
+      <y>540</y>
+      <w>86</w>
+      <h>20</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>410.0;80.0;410.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
@@ -264,10 +264,10 @@ getGameState() == 0</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>810</x>
-      <y>545</y>
-      <w>240</w>
-      <h>150</h>
+      <x>714</x>
+      <y>504</y>
+      <w>96</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 else</panel_attributes>
@@ -276,10 +276,10 @@ else</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>1060</x>
-      <y>720</y>
-      <w>10</w>
-      <h>10</h>
+      <x>814</x>
+      <y>574</y>
+      <w>4</w>
+      <h>4</h>
     </coordinates>
     <panel_attributes>type=final</panel_attributes>
     <additional_attributes/>
@@ -287,10 +287,10 @@ else</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1060</x>
-      <y>690</y>
-      <w>15</w>
-      <h>40</h>
+      <x>814</x>
+      <y>562</y>
+      <w>6</w>
+      <h>16</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
@@ -298,10 +298,10 @@ else</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>260</x>
-      <y>300</y>
-      <w>10</w>
-      <h>10</h>
+      <x>494</x>
+      <y>406</y>
+      <w>4</w>
+      <h>4</h>
     </coordinates>
     <panel_attributes>type=initial</panel_attributes>
     <additional_attributes/>
@@ -309,10 +309,10 @@ else</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>265</x>
-      <y>300</y>
-      <w>190</w>
-      <h>15</h>
+      <x>496</x>
+      <y>406</y>
+      <w>76</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>360.0;10.0;10.0;10.0</additional_attributes>
@@ -320,10 +320,10 @@ else</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>445</x>
-      <y>295</y>
-      <w>50</w>
-      <h>20</h>
+      <x>568</x>
+      <y>404</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>displayStart()</panel_attributes>
     <additional_attributes/>
@@ -331,10 +331,10 @@ else</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>240</x>
-      <y>340</y>
-      <w>50</w>
-      <h>20</h>
+      <x>486</x>
+      <y>422</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>playerSetup()</panel_attributes>
     <additional_attributes/>
@@ -342,10 +342,10 @@ else</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>260</x>
-      <y>355</y>
-      <w>15</w>
-      <h>45</h>
+      <x>494</x>
+      <y>428</y>
+      <w>6</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
@@ -353,10 +353,10 @@ else</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>240</x>
-      <y>390</y>
-      <w>50</w>
-      <h>20</h>
+      <x>486</x>
+      <y>442</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>tableStakes()</panel_attributes>
     <additional_attributes/>
@@ -364,10 +364,10 @@ else</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>240</x>
-      <y>440</y>
-      <w>50</w>
-      <h>20</h>
+      <x>486</x>
+      <y>462</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>placeBlinds()</panel_attributes>
     <additional_attributes/>
@@ -375,10 +375,10 @@ else</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>260</x>
-      <y>405</y>
-      <w>15</w>
-      <h>45</h>
+      <x>494</x>
+      <y>448</y>
+      <w>6</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
@@ -386,10 +386,10 @@ else</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>285</x>
-      <y>310</y>
-      <w>195</w>
-      <h>50</h>
+      <x>504</x>
+      <y>410</y>
+      <w>78</w>
+      <h>20</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;80.0;370.0;80.0;370.0;10.0</additional_attributes>
@@ -397,10 +397,10 @@ else</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>260</x>
-      <y>490</y>
-      <w>10</w>
-      <h>10</h>
+      <x>494</x>
+      <y>482</y>
+      <w>4</w>
+      <h>4</h>
     </coordinates>
     <panel_attributes>type=final</panel_attributes>
     <additional_attributes/>
@@ -408,10 +408,10 @@ else</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>260</x>
-      <y>455</y>
-      <w>15</w>
-      <h>45</h>
+      <x>494</x>
+      <y>468</y>
+      <w>6</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
@@ -419,10 +419,10 @@ else</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>965</x>
-      <y>280</y>
-      <w>195</w>
-      <h>460</h>
+      <x>776</x>
+      <y>398</y>
+      <w>78</w>
+      <h>184</h>
     </coordinates>
     <panel_attributes>View
 valign=top</panel_attributes>
@@ -431,10 +431,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>170</x>
-      <y>265</y>
-      <w>205</w>
-      <h>280</h>
+      <x>458</x>
+      <y>392</y>
+      <w>82</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>Controller
 valign=top</panel_attributes>
@@ -443,10 +443,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>170</x>
-      <y>250</y>
-      <w>400</w>
-      <h>295</h>
+      <x>458</x>
+      <y>386</y>
+      <w>160</w>
+      <h>118</h>
     </coordinates>
     <panel_attributes>initGame()
 valign=top</panel_attributes>
@@ -455,10 +455,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>565</x>
-      <y>255</y>
-      <w>175</w>
-      <h>105</h>
+      <x>616</x>
+      <y>388</y>
+      <w>70</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;330.0;190.0</additional_attributes>
@@ -466,10 +466,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>265</x>
-      <y>955</y>
-      <w>10</w>
-      <h>10</h>
+      <x>496</x>
+      <y>668</y>
+      <w>4</w>
+      <h>4</h>
     </coordinates>
     <panel_attributes>type=initial</panel_attributes>
     <additional_attributes/>
@@ -477,10 +477,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>420</x>
-      <y>950</y>
-      <w>50</w>
-      <h>20</h>
+      <x>558</x>
+      <y>666</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>displayTable()</panel_attributes>
     <additional_attributes/>
@@ -488,10 +488,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>270</x>
-      <y>955</y>
-      <w>160</w>
-      <h>15</h>
+      <x>498</x>
+      <y>668</y>
+      <w>64</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>300.0;10.0;10.0;10.0</additional_attributes>
@@ -499,10 +499,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>465</x>
-      <y>955</y>
-      <w>160</w>
-      <h>15</h>
+      <x>576</x>
+      <y>668</y>
+      <w>64</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>300.0;10.0;10.0;10.0</additional_attributes>
@@ -510,10 +510,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>615</x>
-      <y>950</y>
-      <w>75</w>
-      <h>20</h>
+      <x>636</x>
+      <y>666</y>
+      <w>30</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>resetPlayerFlags()</panel_attributes>
     <additional_attributes/>
@@ -521,10 +521,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>260</x>
-      <y>1025</y>
-      <w>20</w>
-      <h>20</h>
+      <x>494</x>
+      <y>696</y>
+      <w>8</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>type=decision</panel_attributes>
     <additional_attributes/>
@@ -532,10 +532,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>265</x>
-      <y>965</y>
-      <w>400</w>
-      <h>70</h>
+      <x>496</x>
+      <y>672</y>
+      <w>160</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;120.0;10.0;60.0;780.0;60.0;780.0;10.0</additional_attributes>
@@ -543,10 +543,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>610</x>
-      <y>1025</y>
-      <w>75</w>
-      <h>20</h>
+      <x>634</x>
+      <y>696</y>
+      <w>30</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>allPlayersFinished()</panel_attributes>
     <additional_attributes/>
@@ -554,10 +554,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>275</x>
-      <y>1025</y>
-      <w>345</w>
-      <h>20</h>
+      <x>500</x>
+      <y>696</y>
+      <w>138</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 while NOT allPlayersFinished()</panel_attributes>
@@ -566,10 +566,10 @@ while NOT allPlayersFinished()</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>245</x>
-      <y>1085</y>
-      <w>50</w>
-      <h>20</h>
+      <x>488</x>
+      <y>720</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>userInput()</panel_attributes>
     <additional_attributes/>
@@ -577,10 +577,10 @@ while NOT allPlayersFinished()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>290</x>
-      <y>1040</y>
-      <w>370</w>
-      <h>65</h>
+      <x>506</x>
+      <y>702</y>
+      <w>148</w>
+      <h>26</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;110.0;720.0;110.0;720.0;10.0</additional_attributes>
@@ -588,10 +588,10 @@ while NOT allPlayersFinished()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>265</x>
-      <y>1040</y>
-      <w>15</w>
-      <h>55</h>
+      <x>496</x>
+      <y>702</y>
+      <w>6</w>
+      <h>22</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
@@ -599,10 +599,10 @@ while NOT allPlayersFinished()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>1025</y>
-      <w>60</w>
-      <h>20</h>
+      <x>474</x>
+      <y>696</y>
+      <w>24</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 else</panel_attributes>
@@ -611,10 +611,10 @@ else</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>205</x>
-      <y>1030</y>
-      <w>10</w>
-      <h>10</h>
+      <x>472</x>
+      <y>698</y>
+      <w>4</w>
+      <h>4</h>
     </coordinates>
     <panel_attributes>type=final</panel_attributes>
     <additional_attributes/>
@@ -622,10 +622,10 @@ else</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>370</x>
-      <y>895</y>
-      <w>155</w>
-      <h>285</h>
+      <x>538</x>
+      <y>644</y>
+      <w>62</w>
+      <h>114</h>
     </coordinates>
     <panel_attributes>View
 valign=top</panel_attributes>
@@ -634,10 +634,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>200</x>
-      <y>895</y>
-      <w>170</w>
-      <h>285</h>
+      <x>470</x>
+      <y>644</y>
+      <w>68</w>
+      <h>114</h>
     </coordinates>
     <panel_attributes>Controller
 valign=top</panel_attributes>
@@ -646,10 +646,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>525</x>
-      <y>895</y>
-      <w>200</w>
-      <h>285</h>
+      <x>600</x>
+      <y>644</y>
+      <w>80</w>
+      <h>114</h>
     </coordinates>
     <panel_attributes>Model
 valign=top</panel_attributes>
@@ -658,10 +658,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
-      <y>555</y>
-      <w>175</w>
-      <h>335</h>
+      <x>618</x>
+      <y>508</y>
+      <w>70</w>
+      <h>134</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;650.0;330.0;10.0</additional_attributes>
@@ -669,10 +669,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>200</x>
-      <y>880</y>
-      <w>525</w>
-      <h>300</h>
+      <x>470</x>
+      <y>638</y>
+      <w>210</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>bettingRound()
 valign=top</panel_attributes>
@@ -681,10 +681,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>245</x>
-      <y>1315</y>
-      <w>10</w>
-      <h>10</h>
+      <x>488</x>
+      <y>812</y>
+      <w>4</w>
+      <h>4</h>
     </coordinates>
     <panel_attributes>type=initial</panel_attributes>
     <additional_attributes/>
@@ -692,10 +692,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>380</x>
-      <y>1310</y>
-      <w>85</w>
-      <h>20</h>
+      <x>542</x>
+      <y>810</y>
+      <w>34</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>displayPlayerOptions()</panel_attributes>
     <additional_attributes/>
@@ -703,10 +703,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>250</x>
-      <y>1315</y>
-      <w>140</w>
-      <h>15</h>
+      <x>490</x>
+      <y>812</y>
+      <w>56</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>260.0;10.0;10.0;10.0</additional_attributes>
@@ -714,10 +714,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>225</x>
-      <y>1355</y>
-      <w>50</w>
-      <h>20</h>
+      <x>480</x>
+      <y>828</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>valid = false</panel_attributes>
     <additional_attributes/>
@@ -725,10 +725,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>270</x>
-      <y>1325</y>
-      <w>165</w>
-      <h>50</h>
+      <x>498</x>
+      <y>816</y>
+      <w>66</w>
+      <h>20</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;80.0;310.0;80.0;310.0;10.0</additional_attributes>
@@ -736,10 +736,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>245</x>
-      <y>1370</y>
-      <w>15</w>
-      <h>45</h>
+      <x>488</x>
+      <y>834</y>
+      <w>6</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
@@ -747,10 +747,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>240</x>
-      <y>1405</y>
-      <w>20</w>
-      <h>20</h>
+      <x>486</x>
+      <y>848</y>
+      <w>8</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>type=decision</panel_attributes>
     <additional_attributes/>
@@ -758,10 +758,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>245</x>
-      <y>1420</y>
-      <w>75</w>
-      <h>45</h>
+      <x>488</x>
+      <y>854</y>
+      <w>30</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 while valid == false</panel_attributes>
@@ -770,10 +770,10 @@ while valid == false</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>225</x>
-      <y>1455</y>
-      <w>50</w>
-      <h>20</h>
+      <x>480</x>
+      <y>868</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>Get User Input</panel_attributes>
     <additional_attributes/>
@@ -781,10 +781,10 @@ while valid == false</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>245</x>
-      <y>1470</y>
-      <w>15</w>
-      <h>45</h>
+      <x>488</x>
+      <y>874</y>
+      <w>6</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
@@ -792,10 +792,10 @@ while valid == false</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>240</x>
-      <y>1505</y>
-      <w>20</w>
-      <h>20</h>
+      <x>486</x>
+      <y>888</y>
+      <w>8</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>type=decision</panel_attributes>
     <additional_attributes/>
@@ -803,10 +803,10 @@ while valid == false</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>245</x>
-      <y>1520</y>
-      <w>25</w>
-      <h>90</h>
+      <x>488</x>
+      <y>894</y>
+      <w>10</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 
@@ -818,10 +818,10 @@ else</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>255</x>
-      <y>1505</y>
-      <w>325</w>
-      <h>20</h>
+      <x>492</x>
+      <y>888</y>
+      <w>130</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 input == "Call"</panel_attributes>
@@ -830,10 +830,10 @@ input == "Call"</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>570</x>
-      <y>1505</y>
-      <w>50</w>
-      <h>20</h>
+      <x>618</x>
+      <y>888</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>playerCall()</panel_attributes>
     <additional_attributes/>
@@ -841,10 +841,10 @@ input == "Call"</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>280</x>
-      <y>1555</y>
-      <w>50</w>
-      <h>20</h>
+      <x>502</x>
+      <y>908</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>valid = true</panel_attributes>
     <additional_attributes/>
@@ -852,10 +852,10 @@ input == "Call"</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>325</x>
-      <y>1520</y>
-      <w>280</w>
-      <h>55</h>
+      <x>520</x>
+      <y>894</y>
+      <w>112</w>
+      <h>22</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;90.0;540.0;90.0;540.0;10.0</additional_attributes>
@@ -863,10 +863,10 @@ input == "Call"</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>240</x>
-      <y>1600</y>
-      <w>20</w>
-      <h>20</h>
+      <x>486</x>
+      <y>926</y>
+      <w>8</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>type=decision</panel_attributes>
     <additional_attributes/>
@@ -874,10 +874,10 @@ input == "Call"</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>245</x>
-      <y>1615</y>
-      <w>25</w>
-      <h>90</h>
+      <x>488</x>
+      <y>932</y>
+      <w>10</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 
@@ -889,10 +889,10 @@ else</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>255</x>
-      <y>1600</y>
-      <w>325</w>
-      <h>20</h>
+      <x>492</x>
+      <y>926</y>
+      <w>130</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 input == "Raise #"</panel_attributes>
@@ -901,10 +901,10 @@ input == "Raise #"</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>570</x>
-      <y>1600</y>
-      <w>90</w>
-      <h>20</h>
+      <x>618</x>
+      <y>926</y>
+      <w>36</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>playerRaise(int amount)</panel_attributes>
     <additional_attributes/>
@@ -912,10 +912,10 @@ input == "Raise #"</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>280</x>
-      <y>1650</y>
-      <w>50</w>
-      <h>20</h>
+      <x>502</x>
+      <y>946</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>valid = true</panel_attributes>
     <additional_attributes/>
@@ -923,10 +923,10 @@ input == "Raise #"</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>325</x>
-      <y>1615</y>
-      <w>280</w>
-      <h>55</h>
+      <x>520</x>
+      <y>932</y>
+      <w>112</w>
+      <h>22</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;90.0;540.0;90.0;540.0;10.0</additional_attributes>
@@ -934,10 +934,10 @@ input == "Raise #"</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>245</x>
-      <y>1655</y>
-      <w>45</w>
-      <h>15</h>
+      <x>488</x>
+      <y>948</y>
+      <w>18</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
@@ -945,10 +945,10 @@ input == "Raise #"</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>240</x>
-      <y>1695</y>
-      <w>20</w>
-      <h>20</h>
+      <x>486</x>
+      <y>964</y>
+      <w>8</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>type=decision</panel_attributes>
     <additional_attributes/>
@@ -956,10 +956,10 @@ input == "Raise #"</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>245</x>
-      <y>1710</y>
-      <w>25</w>
-      <h>90</h>
+      <x>488</x>
+      <y>970</y>
+      <w>10</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 
@@ -971,10 +971,10 @@ else</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>255</x>
-      <y>1695</y>
-      <w>325</w>
-      <h>20</h>
+      <x>492</x>
+      <y>964</y>
+      <w>130</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 input == "Fold"</panel_attributes>
@@ -983,10 +983,10 @@ input == "Fold"</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>570</x>
-      <y>1695</y>
-      <w>50</w>
-      <h>20</h>
+      <x>618</x>
+      <y>964</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>playerFold()</panel_attributes>
     <additional_attributes/>
@@ -994,10 +994,10 @@ input == "Fold"</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>280</x>
-      <y>1745</y>
-      <w>50</w>
-      <h>20</h>
+      <x>502</x>
+      <y>984</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>valid = true</panel_attributes>
     <additional_attributes/>
@@ -1005,10 +1005,10 @@ input == "Fold"</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>325</x>
-      <y>1710</y>
-      <w>280</w>
-      <h>55</h>
+      <x>520</x>
+      <y>970</y>
+      <w>112</w>
+      <h>22</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;90.0;540.0;90.0;540.0;10.0</additional_attributes>
@@ -1016,10 +1016,10 @@ input == "Fold"</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>245</x>
-      <y>1750</y>
-      <w>45</w>
-      <h>15</h>
+      <x>488</x>
+      <y>986</y>
+      <w>18</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
@@ -1027,10 +1027,10 @@ input == "Fold"</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>240</x>
-      <y>1790</y>
-      <w>20</w>
-      <h>20</h>
+      <x>486</x>
+      <y>1002</y>
+      <w>8</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>type=decision</panel_attributes>
     <additional_attributes/>
@@ -1038,10 +1038,10 @@ input == "Fold"</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>245</x>
-      <y>1805</y>
-      <w>25</w>
-      <h>90</h>
+      <x>488</x>
+      <y>1008</y>
+      <w>10</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 
@@ -1053,10 +1053,10 @@ else</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>255</x>
-      <y>1790</y>
-      <w>325</w>
-      <h>20</h>
+      <x>492</x>
+      <y>1002</y>
+      <w>130</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 input == "Check"</panel_attributes>
@@ -1065,10 +1065,10 @@ input == "Check"</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>570</x>
-      <y>1790</y>
-      <w>50</w>
-      <h>20</h>
+      <x>618</x>
+      <y>1002</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>playerCheck()</panel_attributes>
     <additional_attributes/>
@@ -1076,10 +1076,10 @@ input == "Check"</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>280</x>
-      <y>1840</y>
-      <w>50</w>
-      <h>20</h>
+      <x>502</x>
+      <y>1022</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>valid = true</panel_attributes>
     <additional_attributes/>
@@ -1087,10 +1087,10 @@ input == "Check"</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>325</x>
-      <y>1805</y>
-      <w>280</w>
-      <h>55</h>
+      <x>520</x>
+      <y>1008</y>
+      <w>112</w>
+      <h>22</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;90.0;540.0;90.0;540.0;10.0</additional_attributes>
@@ -1098,10 +1098,10 @@ input == "Check"</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>245</x>
-      <y>1845</y>
-      <w>45</w>
-      <h>15</h>
+      <x>488</x>
+      <y>1024</y>
+      <w>18</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
@@ -1109,10 +1109,10 @@ input == "Check"</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>240</x>
-      <y>1885</y>
-      <w>20</w>
-      <h>20</h>
+      <x>486</x>
+      <y>1040</y>
+      <w>8</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>type=decision</panel_attributes>
     <additional_attributes/>
@@ -1120,10 +1120,10 @@ input == "Check"</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>245</x>
-      <y>1900</y>
-      <w>25</w>
-      <h>90</h>
+      <x>488</x>
+      <y>1046</y>
+      <w>10</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 
@@ -1135,10 +1135,10 @@ else</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>255</x>
-      <y>1885</y>
-      <w>325</w>
-      <h>20</h>
+      <x>492</x>
+      <y>1040</y>
+      <w>130</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 input == "Peek"</panel_attributes>
@@ -1147,10 +1147,10 @@ input == "Peek"</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>570</x>
-      <y>1885</y>
-      <w>50</w>
-      <h>20</h>
+      <x>618</x>
+      <y>1040</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>playerPeek()</panel_attributes>
     <additional_attributes/>
@@ -1158,10 +1158,10 @@ input == "Peek"</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>280</x>
-      <y>1935</y>
-      <w>50</w>
-      <h>20</h>
+      <x>502</x>
+      <y>1060</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>valid = true</panel_attributes>
     <additional_attributes/>
@@ -1169,10 +1169,10 @@ input == "Peek"</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>325</x>
-      <y>1900</y>
-      <w>280</w>
-      <h>55</h>
+      <x>520</x>
+      <y>1046</y>
+      <w>112</w>
+      <h>22</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;90.0;540.0;90.0;540.0;10.0</additional_attributes>
@@ -1180,10 +1180,10 @@ input == "Peek"</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>245</x>
-      <y>1940</y>
-      <w>45</w>
-      <h>15</h>
+      <x>488</x>
+      <y>1062</y>
+      <w>18</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
@@ -1191,10 +1191,10 @@ input == "Peek"</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>240</x>
-      <y>1980</y>
-      <w>20</w>
-      <h>20</h>
+      <x>486</x>
+      <y>1078</y>
+      <w>8</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>type=decision</panel_attributes>
     <additional_attributes/>
@@ -1202,10 +1202,10 @@ input == "Peek"</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>245</x>
-      <y>1995</y>
-      <w>25</w>
-      <h>90</h>
+      <x>488</x>
+      <y>1084</y>
+      <w>10</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 
@@ -1217,10 +1217,10 @@ else</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>255</x>
-      <y>1980</y>
-      <w>325</w>
-      <h>20</h>
+      <x>492</x>
+      <y>1078</y>
+      <w>130</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 input == "All In"</panel_attributes>
@@ -1229,10 +1229,10 @@ input == "All In"</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>570</x>
-      <y>1980</y>
-      <w>50</w>
-      <h>20</h>
+      <x>618</x>
+      <y>1078</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>playerAllIn()</panel_attributes>
     <additional_attributes/>
@@ -1240,10 +1240,10 @@ input == "All In"</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>280</x>
-      <y>2030</y>
-      <w>50</w>
-      <h>20</h>
+      <x>502</x>
+      <y>1098</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>valid = true</panel_attributes>
     <additional_attributes/>
@@ -1251,10 +1251,10 @@ input == "All In"</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>325</x>
-      <y>1995</y>
-      <w>280</w>
-      <h>55</h>
+      <x>520</x>
+      <y>1084</y>
+      <w>112</w>
+      <h>22</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;90.0;540.0;90.0;540.0;10.0</additional_attributes>
@@ -1262,10 +1262,10 @@ input == "All In"</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>245</x>
-      <y>2035</y>
-      <w>45</w>
-      <h>15</h>
+      <x>488</x>
+      <y>1100</y>
+      <w>18</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
@@ -1273,10 +1273,10 @@ input == "All In"</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>240</x>
-      <y>2075</y>
-      <w>20</w>
-      <h>20</h>
+      <x>486</x>
+      <y>1116</y>
+      <w>8</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>type=decision</panel_attributes>
     <additional_attributes/>
@@ -1284,10 +1284,10 @@ input == "All In"</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>255</x>
-      <y>2075</y>
-      <w>325</w>
-      <h>20</h>
+      <x>492</x>
+      <y>1116</y>
+      <w>130</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 input == "Pick # # # # #"</panel_attributes>
@@ -1296,10 +1296,10 @@ input == "Pick # # # # #"</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>570</x>
-      <y>2075</y>
-      <w>80</w>
-      <h>20</h>
+      <x>618</x>
+      <y>1116</y>
+      <w>32</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>playerPick(int picks[5])</panel_attributes>
     <additional_attributes/>
@@ -1307,10 +1307,10 @@ input == "Pick # # # # #"</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>225</x>
-      <y>2125</y>
-      <w>50</w>
-      <h>20</h>
+      <x>480</x>
+      <y>1136</y>
+      <w>20</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>valid = true</panel_attributes>
     <additional_attributes/>
@@ -1318,10 +1318,10 @@ input == "Pick # # # # #"</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>270</x>
-      <y>2090</y>
-      <w>335</w>
-      <h>55</h>
+      <x>498</x>
+      <y>1122</y>
+      <w>134</w>
+      <h>22</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;90.0;650.0;90.0;650.0;10.0</additional_attributes>
@@ -1329,10 +1329,10 @@ input == "Pick # # # # #"</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>120</x>
-      <y>2015</y>
-      <w>75</w>
-      <h>20</h>
+      <x>438</x>
+      <y>1092</y>
+      <w>30</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>Exception
 Unrecognized Input</panel_attributes>
@@ -1341,10 +1341,10 @@ Unrecognized Input</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>155</x>
-      <y>1410</y>
-      <w>95</w>
-      <h>615</h>
+      <x>452</x>
+      <y>850</y>
+      <w>38</w>
+      <h>246</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>170.0;10.0;10.0;10.0;10.0;1210.0</additional_attributes>
@@ -1352,10 +1352,10 @@ Unrecognized Input</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>245</x>
-      <y>2185</y>
-      <w>10</w>
-      <h>10</h>
+      <x>488</x>
+      <y>1160</y>
+      <w>4</w>
+      <h>4</h>
     </coordinates>
     <panel_attributes>type=final</panel_attributes>
     <additional_attributes/>
@@ -1363,10 +1363,10 @@ Unrecognized Input</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>245</x>
-      <y>2140</y>
-      <w>15</w>
-      <h>55</h>
+      <x>488</x>
+      <y>1142</y>
+      <w>6</w>
+      <h>22</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
@@ -1374,10 +1374,10 @@ Unrecognized Input</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>365</x>
-      <y>1295</y>
-      <w>135</w>
-      <h>920</h>
+      <x>536</x>
+      <y>804</y>
+      <w>54</w>
+      <h>368</h>
     </coordinates>
     <panel_attributes>View
 valign=top</panel_attributes>
@@ -1386,10 +1386,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>90</x>
-      <y>1295</y>
-      <w>275</w>
-      <h>920</h>
+      <x>426</x>
+      <y>804</y>
+      <w>110</w>
+      <h>368</h>
     </coordinates>
     <panel_attributes>Controller
 valign=top</panel_attributes>
@@ -1398,10 +1398,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>500</x>
-      <y>1295</y>
-      <w>210</w>
-      <h>920</h>
+      <x>590</x>
+      <y>804</y>
+      <w>84</w>
+      <h>368</h>
     </coordinates>
     <panel_attributes>Model
 valign=top</panel_attributes>
@@ -1410,10 +1410,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>90</x>
-      <y>1280</y>
-      <w>620</w>
-      <h>935</h>
+      <x>426</x>
+      <y>798</y>
+      <w>248</w>
+      <h>374</h>
     </coordinates>
     <panel_attributes>userInput()
 valign=top</panel_attributes>
@@ -1422,10 +1422,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>265</x>
-      <y>1100</y>
-      <w>140</w>
-      <h>190</h>
+      <x>496</x>
+      <y>726</y>
+      <w>56</w>
+      <h>76</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>260.0;360.0;10.0;10.0</additional_attributes>
@@ -1433,10 +1433,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>245</x>
-      <y>1560</y>
-      <w>45</w>
-      <h>15</h>
+      <x>488</x>
+      <y>910</y>
+      <w>18</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
@@ -1444,10 +1444,10 @@ valign=top</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>150</x>
-      <y>2075</y>
-      <w>20</w>
-      <h>20</h>
+      <x>450</x>
+      <y>1116</y>
+      <w>8</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>type=decision</panel_attributes>
     <additional_attributes/>
@@ -1455,10 +1455,10 @@ valign=top</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>165</x>
-      <y>2075</y>
-      <w>85</w>
-      <h>20</h>
+      <x>456</x>
+      <y>1116</y>
+      <w>34</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 else</panel_attributes>
@@ -1467,10 +1467,10 @@ else</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>155</x>
-      <y>2090</y>
-      <w>100</w>
-      <h>110</h>
+      <x>452</x>
+      <y>1122</y>
+      <w>40</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 else</panel_attributes>
@@ -1479,13 +1479,907 @@ else</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>155</x>
-      <y>2030</y>
-      <w>55</w>
-      <h>55</h>
+      <x>452</x>
+      <y>1098</y>
+      <w>22</w>
+      <h>22</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 valid == false</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>178</x>
+      <y>200</y>
+      <w>4</w>
+      <h>4</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>262</x>
+      <y>198</y>
+      <w>42</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>displayPromptPlayerNumber()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>170</x>
+      <y>220</y>
+      <w>20</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>valid = false</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>188</x>
+      <y>204</y>
+      <w>100</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;480.0;100.0;480.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>176</x>
+      <y>242</y>
+      <w>8</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>178</x>
+      <y>226</y>
+      <w>6</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>178</x>
+      <y>248</y>
+      <w>30</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+while valid == false</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>170</x>
+      <y>264</y>
+      <w>20</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>Get User Input</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>176</x>
+      <y>286</y>
+      <w>8</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>178</x>
+      <y>270</y>
+      <w>6</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>178</x>
+      <y>292</y>
+      <w>18</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+User Input
+is valid</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>156</x>
+      <y>266</y>
+      <w>24</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+User Input
+is not valid</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0;10.0;120.0;100.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>200</y>
+      <w>86</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>410.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>176</x>
+      <y>330</y>
+      <w>8</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>182</x>
+      <y>330</y>
+      <w>86</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+for loop
+i &lt; playerNumber</panel_attributes>
+    <additional_attributes>410.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>170</x>
+      <y>308</y>
+      <w>20</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>playerNumber</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>178</x>
+      <y>314</y>
+      <w>6</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>264</x>
+      <y>330</y>
+      <w>40</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>displayPromptPlayerName()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>170</x>
+      <y>354</y>
+      <w>20</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>cin &gt;&gt; input</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>170</x>
+      <y>362</y>
+      <w>20</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>input: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>188</x>
+      <y>336</y>
+      <w>102</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;490.0;110.0;490.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>346</x>
+      <y>382</y>
+      <w>44</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>addPlayer(input, defaultStakes)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>194</x>
+      <y>372</y>
+      <w>28</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>defaultStakes: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>178</x>
+      <y>368</y>
+      <w>172</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>840.0;90.0;10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>206</x>
+      <y>378</y>
+      <w>6</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>354</x>
+      <y>410</y>
+      <w>26</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>shufflePlayers()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>152</x>
+      <y>336</y>
+      <w>222</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>140.0;10.0;140.0;60.0;10.0;60.0;10.0;320.0;1090.0;320.0;1090.0;270.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>136</x>
+      <y>332</y>
+      <w>222</w>
+      <h>86</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+end loop</panel_attributes>
+    <additional_attributes>1090.0;410.0;10.0;410.0;10.0;10.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>170</x>
+      <y>426</y>
+      <w>20</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>valid = true</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>188</x>
+      <y>416</y>
+      <w>184</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;900.0;70.0;900.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>118</x>
+      <y>244</y>
+      <w>62</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>290.0;10.0;10.0;10.0;10.0;930.0;260.0;930.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>182</x>
+      <y>242</y>
+      <w>32</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+valid != false</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>210</x>
+      <y>244</y>
+      <w>4</w>
+      <h>4</h>
+    </coordinates>
+    <panel_attributes>type=final</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>316</x>
+      <y>190</y>
+      <w>88</w>
+      <h>254</h>
+    </coordinates>
+    <panel_attributes>Model
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>106</x>
+      <y>190</y>
+      <w>142</w>
+      <h>254</h>
+    </coordinates>
+    <panel_attributes>Controller
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>248</x>
+      <y>190</y>
+      <w>68</w>
+      <h>254</h>
+    </coordinates>
+    <panel_attributes>View
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>106</x>
+      <y>184</y>
+      <w>298</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>playerSetup()
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>158</x>
+      <y>502</y>
+      <w>4</w>
+      <h>4</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>150</x>
+      <y>520</y>
+      <w>20</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>valid = false</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>150</x>
+      <y>562</y>
+      <w>20</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>cin &gt;&gt; input</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>150</x>
+      <y>570</y>
+      <w>20</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>input: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>158</x>
+      <y>526</y>
+      <w>6</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>158</x>
+      <y>576</y>
+      <w>6</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>156</x>
+      <y>592</y>
+      <w>8</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>130</x>
+      <y>564</y>
+      <w>30</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+input not valid</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0;10.0;160.0;130.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>202</x>
+      <y>592</y>
+      <w>122</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+input is valid</panel_attributes>
+    <additional_attributes>590.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>320</x>
+      <y>592</y>
+      <w>24</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>setStakes(stakes)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>184</x>
+      <y>592</y>
+      <w>20</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>input: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>162</x>
+      <y>594</y>
+      <w>26</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>240</x>
+      <y>500</y>
+      <w>34</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>displayPromptStakes()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>168</x>
+      <y>506</y>
+      <w>94</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;450.0;90.0;450.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>502</y>
+      <w>84</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>400.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>150</x>
+      <y>612</y>
+      <w>20</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>valid = true</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>168</x>
+      <y>598</y>
+      <w>168</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;820.0;90.0;820.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>156</x>
+      <y>542</y>
+      <w>8</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>158</x>
+      <y>548</y>
+      <w>30</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+while valid == false</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>544</y>
+      <w>40</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0;10.0;360.0;150.0;360.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>188</x>
+      <y>544</y>
+      <w>4</w>
+      <h>4</h>
+    </coordinates>
+    <panel_attributes>type=final</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>162</x>
+      <y>542</y>
+      <w>30</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+valid != false</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>110</x>
+      <y>466</y>
+      <w>104</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>Controller
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>288</x>
+      <y>466</y>
+      <w>76</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>View
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>214</x>
+      <y>466</y>
+      <w>74</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>Model
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>110</x>
+      <y>460</y>
+      <w>254</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>tabkeStakes()
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>282</x>
+      <y>674</y>
+      <w>4</w>
+      <h>4</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>284</x>
+      <y>674</y>
+      <w>106</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>510.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>386</x>
+      <y>672</y>
+      <w>28</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>resetPlyerFlags()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>386</x>
+      <y>696</y>
+      <w>28</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>playerPostBlinds()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>398</x>
+      <y>678</y>
+      <w>6</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>352</x>
+      <y>698</y>
+      <w>38</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>318</x>
+      <y>696</y>
+      <w>36</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>displayPostBlinds()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>282</x>
+      <y>698</y>
+      <w>4</w>
+      <h>4</h>
+    </coordinates>
+    <panel_attributes>type=final</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>284</x>
+      <y>698</y>
+      <w>38</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>268</x>
+      <y>662</y>
+      <w>36</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Controller
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>304</x>
+      <y>662</y>
+      <w>66</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>View
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>370</x>
+      <y>662</y>
+      <w>60</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Model
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>268</x>
+      <y>656</y>
+      <w>162</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>placeBlinds()
+valign=top</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>468</y>
+      <w>94</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;940.0;450.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>362</x>
+      <y>444</y>
+      <w>128</w>
+      <h>22</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;90.0;620.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>402</x>
+      <y>186</y>
+      <w>88</w>
+      <h>244</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;420.0;1200.0</additional_attributes>
   </element>
 </diagram>

@@ -1,5 +1,16 @@
 #include "Player.h"
 
+std::string flagToString(int flagVal) {
+    std::string tmp(playerFlag_str[flagVal]);
+    return tmp;
+}
+
+Player::Player(std::string name, int stakes)
+{
+    this->name = name;
+    stack = stakes;
+}
+
 playerFlag Player::getPlayerFlag()
 {
     return flag;
@@ -15,6 +26,11 @@ int Player::getStack()
     return stack;
 }
 
+void Player::setStake(int newStake)
+{
+    stack = newStake;
+}
+
 int Player::getCurBet()
 {
     return bet;
@@ -27,4 +43,11 @@ void Player::addBet(int value)
         stack -= value;
         bet += value;
     }
+}
+
+std::string Player::toString()
+{
+    std::string output;
+    output += name + " | Stack: " + std::to_string(stack) + " | Bet: " + std::to_string(bet) + "\n" + flagToString(flag) + "\n\n";
+    return output;
 }

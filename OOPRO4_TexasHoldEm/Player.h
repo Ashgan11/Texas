@@ -1,3 +1,4 @@
+#include <string>
 #include "CardAndHand.h"
 #pragma once
 
@@ -6,6 +7,13 @@ enum playerFlag {
 	Finished,
 	Check,
 	Fold
+};
+
+static const char* playerFlag_str[] = {
+	"Unfinished",
+	"Finished",
+	"Check",
+	"Fold"
 };
 
 class Player
@@ -18,6 +26,7 @@ private:
 	Hand hand;
 	playerFlag flag;
 public:
+	Player();
 	Player(std::string name, int stakes);
 
 	playerFlag getPlayerFlag();

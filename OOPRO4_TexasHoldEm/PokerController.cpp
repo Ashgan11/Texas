@@ -36,7 +36,7 @@ void PokerController::playerSetup()
 				int playerNumber = stoi(input);
 				if (playerNumber > maxAllowedPlayers) throw invalid_argument("You cannot have more than 10 players!");
 				else if (playerNumber < 2) throw invalid_argument("You cannot play with fewer than 2 players!");
-				for (int i = 0; i < maxAllowedPlayers; i++) {
+				for (int i = 0; i < playerNumber; i++) {
 					view->displayPromptPlayerName();
 					cin >> input;
 					model->addPlayer(input, defaultStakes);
