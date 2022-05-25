@@ -142,6 +142,8 @@ void PokerModel::setStakes(int stakes) {
 
 void PokerModel::shufflePlayers()
 {
+    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+    std::shuffle(players.begin(), players.end(), std::default_random_engine(seed));
 }
 
 void PokerModel::playerCall() {

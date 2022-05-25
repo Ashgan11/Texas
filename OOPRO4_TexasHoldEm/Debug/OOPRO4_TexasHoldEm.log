@@ -1,3 +1,33 @@
-﻿  PokerModel.cpp
+﻿  OOPRO4_TexasHoldEm.cpp
+  PokerController.cpp
+  PokerGame.cpp
+  PokerModel.cpp
 F:\User Data\Desktop\BTS\Semester 4\OPRO\Texas\OOPRO4_TexasHoldEm\PokerModel.cpp(35,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  OOPRO4_TexasHoldEm.vcxproj -> F:\User Data\Desktop\BTS\Semester 4\OPRO\Texas\OOPRO4_TexasHoldEm\Debug\OOPRO4_TexasHoldEm.exe
+F:\User Data\Desktop\BTS\Semester 4\OPRO\Texas\OOPRO4_TexasHoldEm\PokerModel.cpp(145,19): warning C4244: 'initializing': conversion from '_Rep' to 'unsigned int', possible loss of data
+          with
+          [
+              _Rep=std::chrono::system_clock::rep
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\algorithm(4808,46): error C2676: binary '+': 'std::_List_unchecked_iterator<std::_List_val<std::_List_simple_types<_Ty>>>' does not define this operator or a conversion to a type acceptable to the predefined operator
+          with
+          [
+              _Ty=Player
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\algorithm(4817): message : see reference to function template instantiation 'void std::_Random_shuffle1<_RanIt,std::_Rng_from_urng<int,_Urng0>>(_RanIt,_RanIt,_RngFn &)' being compiled
+          with
+          [
+              _RanIt=std::_List_iterator<std::_List_val<std::_List_simple_types<Player>>>,
+              _RngFn=std::_Rng_from_urng<int,_Urng0>
+          ]
+F:\User Data\Desktop\BTS\Semester 4\OPRO\Texas\OOPRO4_TexasHoldEm\PokerModel.cpp(146): message : see reference to function template instantiation 'void std::shuffle<std::_List_iterator<std::_List_val<std::_List_simple_types<_Ty>>>,std::default_random_engine>(_RanIt,_RanIt,_Urng &&)' being compiled
+          with
+          [
+              _Ty=Player,
+              _RanIt=std::_List_iterator<std::_List_val<std::_List_simple_types<Player>>>,
+              _Urng=std::default_random_engine
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\algorithm(4808,18): error C2672: 'std::iter_swap': no matching overloaded function found
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\algorithm(4808,1): error C2780: 'void std::iter_swap(_FwdIt1,_FwdIt2)': expects 2 arguments - 1 provided
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(80): message : see declaration of 'std::iter_swap'
+  PokerView.cpp
+  Generating Code...

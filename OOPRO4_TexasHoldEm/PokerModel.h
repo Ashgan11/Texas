@@ -1,4 +1,7 @@
 #include <list>
+#include <algorithm>
+#include <random>
+#include <chrono>
 #include "Player.h"
 #include "CardAndHand.h"
 #pragma once
