@@ -1,2 +1,3 @@
 https://automaticpoker.com/poker-basics/heads-up-game-play-rules-for-texas-holdem/
 https://oag.ca.gov/sites/all/files/agweb/pdfs/gambling/BGC_texas.pdf
+https://www.programminglogic.com/a-better-poker-hand-evaluator-in-c/

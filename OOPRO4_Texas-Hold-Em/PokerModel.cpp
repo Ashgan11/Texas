@@ -6,7 +6,28 @@ PokerModel::PokerModel()
 
 void PokerModel::advancePlayer()
 {
+	getActivePlayer()->hideHole();
 	if (++activePlayer == playerNumber) activePlayer = 0;
+	if (getActivePlayer()->getFlag() == Fold || getActivePlayer()->getStack() == 0) advancePlayer();
+}
+
+void PokerModel::endRound()
+{
+	round++;
+	raisesCalled = 0;
+	resetPlayerFlags();	
+}
+
+void PokerModel::distributeCards()
+{
+	for (int i = 0; i < 5; i++) {
+		communityCards[i] = pokerDeck.dealCard();
+		//communityCards[i].hidden = false;
+	}
+	for (int i = 0; i < playerNumber; i++) {
+		Card newHole[2]{ pokerDeck.dealCard(),pokerDeck.dealCard() };
+		players[i].setHole(newHole);
+	}
 }
 
 void PokerModel::checkFolds()
@@ -20,21 +41,26 @@ void PokerModel::checkFolds()
 		}
 	}
 	if (activePlayers == 1) {
-		gameState = winningIndex;
+		gameState = winningIndex+1;
 	}
 }
 
 void PokerModel::playerCall()
 {
-	getActivePlayer()->addWager(getHighestBid());
-	getActivePlayer()->setFlag(Finished);
-	advancePlayer();
+	int missingWager = getHighestBid() - getActivePlayer()->getWager();
+	if (missingWager != 0) {
+		getActivePlayer()->addWager(missingWager);
+		getActivePlayer()->setFlag(Finished);
+		advancePlayer();
+	}
+	else throw std::invalid_argument("Cannot call when your wager already matches the highest bid!");
 }
 
 void PokerModel::playerRaise(int amount)
 {
+	if (++raisesCalled > 3) throw std::exception("A raise cannot be called more than three times per betting round!");
 	if (amount >= getHighestBid() * 2) {
-		getActivePlayer()->addWager(amount);
+		getActivePlayer()->addWager(amount-getActivePlayer()->getWager());
 		getActivePlayer()->setFlag(Finished);
 		advancePlayer();
 	}
@@ -51,15 +77,21 @@ void PokerModel::playerFold()
 void PokerModel::playerCheck()
 {
 	if (isCheckLegal()) {
-		getActivePlayer()->setFlag(Finished);
+		//getActivePlayer()->setFlag(Finished);
 		advancePlayer();
 	}
 	else throw std::exception("You cannot check when someone else has already pitched a wager this round!");
 }
 
+void PokerModel::playerPeek()
+{
+	getActivePlayer()->revealHole();
+}
+
 void PokerModel::playerAllIn()
 {
 	getActivePlayer()->addWager(getActivePlayer()->getStack());
+	getActivePlayer()->setFlag(Finished);
 	advancePlayer();
 }
 
@@ -75,9 +107,13 @@ void PokerModel::setPlayerNumber(int n)
 
 void PokerModel::resetPlayerFlags()
 {
+	//Set everyone's flag to unfinished (unless they folded)
 	for (int i = 0; i < playerNumber; i++) {
 		players[i].setFlag(Unfinished);
 	}
+
+	//Reset table activation order at end of round
+	activePlayer = 0;
 }
 
 Player* PokerModel::getPlayers()
@@ -142,5 +178,8 @@ bool PokerModel::allWagersEqual()
 
 bool PokerModel::isCheckLegal()
 {
-	return false;
+	for (int i = 0; i < playerNumber; i++) {
+		if (players[i].getFlag() == Finished) return false;
+	}
+	return true;
 }

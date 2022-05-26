@@ -40,6 +40,7 @@ void PokerController::playerSetup(Player* players)
 void PokerController::playGame()
 {
 	postBlinds();
+	model->distributeCards();
 	while (model->getGameState() == 0 && model->getRound() < 4) {
 		bettingRound();
 	}
@@ -54,7 +55,6 @@ void PokerController::postBlinds()
 		model->advancePlayer();
 		model->playerRaise(1);
 		model->playerRaise(2);
-		//Player post small blind -> advance -> post big blind
 	}
 	else {
 		model->playerRaise(1);
@@ -64,12 +64,11 @@ void PokerController::postBlinds()
 
 void PokerController::bettingRound()
 {
-	model->resetPlayerFlags();	
-
-	while (!(model->allPlayersActed() && model->allWagersEqual())) {
+	while (!(model->allPlayersActed() && model->allWagersEqual()) && model->getGameState() == 0) {
 		view->displayTable();
 		bettingRoundInput();
 	}
+	if (model->getGameState() == 0) model->endRound();
 }
 
 void PokerController::showDown()
@@ -79,20 +78,86 @@ void PokerController::showDown()
 
 void PokerController::bettingRoundInput()
 {
+	//Display Options
+	view->displayOptions();
 	//Get Input
-	std::string input = getInput();
-
-	//End Activation
-	model->advancePlayer();
+	bool valid = false;
+	while (!valid) {
+		try {
+			std::string input = getInput();
+			inputToLower(input);
+			switch (convertInput(input)) {
+			case 0: {
+				model->playerCall();
+				valid = true;
+				break;
+			}
+			case 1: {
+				std::string remainingString = input.substr(input.find(" "));
+				remainingString.erase(0, 1);
+				if (isNumber(remainingString)) {
+					model->playerRaise(stoi(remainingString));
+					valid = true;
+				}
+				else throw std::invalid_argument("You must raise by a number!");
+				break;
+			}
+			case 2: {
+				model->playerFold();
+				valid = true;
+				break;
+			}
+			case 3: {
+				model->playerCheck();
+				valid = true;
+				break;
+			}
+			case 4: {
+				model->playerPeek();
+				valid = true;
+				break;
+			}
+			case 5: {
+				model->playerAllIn();
+				valid = true;
+				break;
+			}
+			}
+		}
+		catch (std::exception& e) {
+			view->displayException(e);
+		}
+	}
 }
 
 std::string PokerController::getInput()
-{	
-	std::cout << "> ";
+{
+	if (model->getActivePlayer() != nullptr) std::cout << model->getActivePlayer()->getName() + " > ";
+	else std::cout << "> ";
 	std::string input;
-	std::cin >> input;
+	std::getline(std::cin, input);
 	std::cout << "\n";
 	return input;
+}
+
+int PokerController::convertInput(std::string input)
+{
+	if (input == "call") return 0;
+	if ((input.substr(0, input.find(" ")) == "raise")) return 1;
+	if (input == "fold") return 2;
+	if (input == "check") return 3;
+	if (input == "peek") return 4;
+	if (input == "all in") return 5;
+	else throw std::invalid_argument("Unrecognized input!");
+}
+
+void PokerController::inputToLower(std::string& input)
+{
+	std::transform(input.begin(), input.end(), input.begin(), 
+		[](unsigned char c) {
+			return std::tolower(c); 
+		}
+	);
 }
 
 bool PokerController::isNumber(const std::string& s)

@@ -34,9 +34,12 @@ public:
 
 	//Gameplay
 	void addWager(int amount);
+	void revealHole();
+	void hideHole();
 
 	//Setters
 	void setFlag(playerFlag newFlag);
+	void setHole(Card newHole[2]);
 
 	//Getters
 	Card* getHole();

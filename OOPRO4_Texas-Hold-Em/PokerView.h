@@ -15,5 +15,6 @@ public:
 	void displayPromptPlayerName();
 	void displayWinner();
 	void displayTable();
+	void displayOptions();
 	void displayException(std::exception e);
 };

@@ -15,13 +15,7 @@ class PokerController
 private:
 	PokerModel* model;
 	PokerView* view;
-public:
-	PokerController(PokerModel* m, PokerView* v);
-
-	//Setup
-	void playerSetup(Player* players);
-	void playGame();
-
+	
 	//Gameplay
 	void postBlinds();
 	void bettingRound();
@@ -29,8 +23,17 @@ public:
 	void bettingRoundInput();
 
 	//Input Acquisition
-	std::string getInput();
+	std::string getInput();	
+	int convertInput(std::string input);
+	void inputToLower(std::string &input);	
 
 	//Input Validation
 	bool isNumber(const std::string& s);
+
+public:
+	PokerController(PokerModel* m, PokerView* v);
+
+	//Setup
+	void playerSetup(Player* players);
+	void playGame();
 };

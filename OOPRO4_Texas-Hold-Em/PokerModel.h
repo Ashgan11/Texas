@@ -7,6 +7,8 @@ class PokerModel
 private:
 	Player* players;
 
+	Deck pokerDeck;
+
 	Card communityCards[5];
 
 	int playerNumber;
@@ -18,14 +20,17 @@ public:
 	PokerModel();
 
 	//Gameplay
+	void distributeCards();
 	void checkFolds();
 	void advancePlayer();
+	void endRound();
 
 	//Player Actions
 	void playerCall();
 	void playerRaise(int amount);
 	void playerFold();
 	void playerCheck();
+	void playerPeek();
 	void playerAllIn();
 
 	//Setters

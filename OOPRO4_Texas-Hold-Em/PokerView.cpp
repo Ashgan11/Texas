@@ -22,7 +22,9 @@ void PokerView::displayPromptPlayerName()
 
 void PokerView::displayWinner()
 {
-	std::cout << "Winner = " + model->getGameState();
+	displayTable();
+	std::string winner = model->getPlayers()[model->getGameState() - 1].getName();
+	std::cout << "Winner = " + winner;
 }
 
 void PokerView::displayTable()
@@ -63,8 +65,19 @@ void PokerView::displayTable()
 	for (int i = 0; i < model->getPlayerNumber(); i++) std::cout << model->getPlayers()[i].toString();
 }
 
+void PokerView::displayOptions()
+{
+	std::cout << "Options:\n";
+	std::cout << "Call\n";
+	std::cout << "Raise #\n";
+	std::cout << "All In\n";
+	std::cout << "Fold\n";
+	std::cout << "Check\n";
+	std::cout << "Peek\n\n";
+}
+
 void PokerView::displayException(std::exception e)
 {
 	std::cout << e.what();
-	std::cout << "\n";
+	std::cout << "\n\n";
 }
