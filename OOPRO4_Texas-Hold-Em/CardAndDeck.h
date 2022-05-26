@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <iostream>
 #include <exception>
+#include <array>
 #pragma once
 
 enum Rank {
@@ -57,6 +58,8 @@ public:
 	Card(Rank r, Suit s);
 	Card(Rank r, Suit s, bool hidden);
 	std::string toString();
+
+	bool operator < (Card const& other);
 };
 
 class Deck {
@@ -72,5 +75,26 @@ public:
 };
 
 class Hand {
+private:
+	std::array<Card, 7> Stack;
+	std::string handName = "";
+	int handValue = -1;
 
+	void evaluateHand();
+
+	//Individual Type Evaluations
+	bool royalFlush();
+	bool straightFlush();
+	bool fours();
+	bool fullHouse();
+	bool flush();
+	bool straight();
+	bool threes();
+	bool twoPair();
+	bool pair();
+public:
+	Hand(Card inputStack[7]);
+	int getValue();
+	std::string getName();
+	std::string toString();
 };

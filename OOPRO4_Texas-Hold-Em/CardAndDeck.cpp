@@ -56,3 +56,60 @@ std::string Card::toString()
 	if (hidden) return "[ ? ]";
 	else return "[ " + str_rank + " " + str_suit + " ]";
 }
+
+bool Card::operator<(Card const& other)
+{
+	return (rank < other.rank);
+}
+
+Hand::Hand(Card inputStack[7])
+{
+	for (int i = 0; i < 7; i++) {
+		Stack[i] = inputStack[i];
+		Stack[i].hidden = false;
+	}
+}
+
+int Hand::getValue()
+{
+	if (handValue == -1) evaluateHand();
+	return handValue;
+}
+
+std::string Hand::getName()
+{
+	if (handValue == -1) evaluateHand();
+	return handName;
+}
+
+std::string Hand::toString()
+{
+	std::string output;
+	for (int i = 0; i < 7; i++) {
+		output += Stack[i].toString() + "\n";
+	}
+	return output;
+}
+
+void Hand::sort()
+{
+	std::sort(Stack.begin(), Stack.end());
+}
+
+void Hand::evaluateHand()
+{
+	////Placeholder until I do combinatorics
+	//std::array<Card, 5> currentStack{
+	//	Stack[0],
+	//	Stack[1],
+	//	Stack[2],
+	//	Stack[3],
+	//	Stack[4],
+	//};
+	//std::sort(currentStack.begin(), currentStack.end());
+
+	//if (royalFlush()) {
+	//	handValue = 10;
+	//	handName = "Royal Flush";
+	//}
+}
