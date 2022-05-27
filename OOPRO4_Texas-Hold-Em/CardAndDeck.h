@@ -2,6 +2,8 @@
 #include <iostream>
 #include <exception>
 #include <array>
+#include <random>
+#include <chrono>
 #pragma once
 
 enum Rank {
@@ -56,16 +58,19 @@ public:
 
 	Card();
 	Card(Rank r, Suit s);
+	Card(int r, int s);
 	Card(Rank r, Suit s, bool hidden);
 	std::string toString();
 
 	bool operator < (Card const& other);
+	bool operator == (int const& other);
 };
 
 class Deck {
 private:
 	Card Stack[52];
 	int deckSize = 52;
+	unsigned seed = 0;
 public:
 	Deck();
 	std::string toString();
@@ -73,6 +78,9 @@ public:
 	void Shuffle();
 	Card dealCard();
 };
+
+bool sortByRank(Card a, Card b);
+bool sortBySuit(Card a, Card b);
 
 class Hand {
 private:
@@ -85,13 +93,9 @@ private:
 	//Individual Type Evaluations
 	bool royalFlush();
 	bool straightFlush();
-	bool fours();
-	bool fullHouse();
 	bool flush();
 	bool straight();
-	bool threes();
-	bool twoPair();
-	bool pair();
+	
 public:
 	Hand(Card inputStack[7]);
 	int getValue();
