@@ -89,13 +89,8 @@ private:
 	int handValue = -1;
 
 	void evaluateHand();
-
-	//Individual Type Evaluations
-	bool royalFlush();
-	bool straightFlush();
-	bool flush();
-	bool straight();
-	
+	int getHighCard();
+	void updateHandValue(int newVal, std::string newName);
 public:
 	Hand(Card inputStack[7]);
 	int getValue();

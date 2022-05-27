@@ -1,0 +1,19 @@
+9 	HC		130		royal flush
+
+8 	HC+112		118..126	straight flush
+
+7 	v+103		105..117	fours
+
+6 	v1+v2+77	82..104		full house
+
+5 	HC+67		73..81		flush
+
+4 	HC+58		64..72		straight
+
+3 	v+49		51..63		threes
+
+2 	v1+v2+23	28..50		two pair
+
+1 	v+13		15..27		pair
+
+0	getHC		2..14		high card

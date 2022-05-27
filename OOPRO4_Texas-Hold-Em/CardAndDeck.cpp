@@ -131,29 +131,49 @@ void Hand::evaluateHand()
 	int threes		= std::count(cardCounts.begin(), cardCounts.end(), 3);
 	int fours		= std::count(cardCounts.begin(), cardCounts.end(), 4);
 
-	if (fours >= 1) {
-		handValue = 8;
-		handName = "Four-of-a-Kind";
+	if (fours == 1) {
+		int index = 0;
+		for (int i = 0; i < 13; i++) {
+			if (cardCounts[i] == 4) index = i;
+		}
+		updateHandValue((index + 2) + 103, "Four-of-a-Kind");
 	}
 	else if (threes >= 1 && pairs >= 1) {
-		handValue = 7;
-		handName = "Full House";
+		int indexThrees = 0;
+		for (int i = 0; i < 13; i++) {
+			if (cardCounts[i] == 3) indexThrees = i;
+		}
+		int indexPairs = 0;
+		for (int i = 0; i < 13; i++) {
+			if (cardCounts[i] == 2) indexPairs = i;
+		}
+		updateHandValue((indexThrees + 2) + (indexPairs + 2) + 77, "Full House");
 	}
 	else if (threes >= 1) {
-		handValue = 4;
-		handName = "Three-of-a-Kind";
+		int index = 0;
+		for (int i = 0; i < 13; i++) {
+			if (cardCounts[i] == 3) index = i;
+		}
+		updateHandValue((index + 2) + 49, "Three-of-a-Kind");
 	}
 	else if (pairs >= 2) {
-		handValue = 3;
-		handName = "Two-Pair";
+		int indexFirst = 0;
+		int indexSecond = 0;
+		for (int i = 12; i >= 0; i--) {
+			if (cardCounts[i] == 2 && indexFirst == 0) indexFirst = i;
+			else if (cardCounts[i] == 2 && indexSecond == 0) indexSecond = i;
+		}
+		updateHandValue((indexFirst + 2) + (indexSecond + 2) + 23, "Two-Pair");
 	}
 	else if (pairs == 1) {
-		handValue = 2;
-		handName = "One-Pair";
+		int index = 0;
+		for (int i = 0; i < 13; i++) {
+			if (cardCounts[i] == 2) index = i;
+		}
+		updateHandValue((index + 2) + 13, "One-Pair");
 	}
 
 	//Evaluate Sequences
-	//Flush
 	bool flush = 0;
 	bool straight = 0;
 
@@ -163,76 +183,73 @@ void Hand::evaluateHand()
 		flush = 1;
 	}
 
-	//Straight
 	int count = 0;
+	int highIndex = 0;
 	for (int i = 0; i < 6; i++) {
 		if (Stack[i].rank + 1 == Stack[i + 1].rank) {
-			if (++count == 4) straight = 1;
+			if (++count == 4) {
+				straight = 1;
+				highIndex = i+1;
+			}
 		}
 		else if (!(Stack[i].rank == Stack[i + 1].rank)) count = 0;
 	}
 
 	
-	if (straight && flush && handValue < 9) {
-		handValue = 9;
-		handName = "Straight Flush";
+	if (straight && flush) {
+		updateHandValue(Stack[highIndex].rank + 112, "Straight Flush");
 		if (Stack[0].rank == 10 && Stack[4].rank == 14 && Stack[0].suit == Stack[4].suit ||
 			Stack[1].rank == 10 && Stack[5].rank == 14 && Stack[1].suit == Stack[5].suit ||
 			Stack[2].rank == 10 && Stack[6].rank == 14 && Stack[2].suit == Stack[6].suit) {
-				handValue = 10;
-				handName = "Royal Flush";
+				updateHandValue(130, "Royal Flush");
 		}
 	}
-	else if (flush && handValue < 6) {
-		handValue = 6;
-		handName = "Flush";
+	else if (flush) {
+		updateHandValue(Stack[highIndex].rank + 67, "Flush");
 	}
 	else {
-		//TEST
 		std::sort(Stack.begin(), Stack.end(), sortByRank);
 		int count = 0;
 		for (int i = 0; i < 6; i++) {
 			if (Stack[i].rank + 1 == Stack[i + 1].rank) {
-				if (++count == 4) straight = 1;
+				if (++count == 4) {
+					straight = 1;
+					highIndex = i+1;
+				}
 			}
 			else if (!(Stack[i].rank == Stack[i + 1].rank)) count = 0;
 		}
-		//
+		if (Stack[0].rank == 14 && Stack[4].rank == 5 ||
+			Stack[1].rank == 14 && Stack[5].rank == 5 ||
+			Stack[2].rank == 14 && Stack[6].rank == 5) {
+			straight = 1;
+		}
 		if (straight && handValue < 5) {
-			handValue = 5;
-			handName = "Straight";
+			updateHandValue(Stack[highIndex].rank + 58, "Straight");
 		}
 	}
 
-	//Check if it is a flush, then if it is a straight
-	//If both == 1 then its a straight flush -> check for royal flush on top (first card in sequence)
-	//If only one == 1 then it is that
-	//Else its not a sequence
-	//And if it wasnt a multiple either then default to high card
+	//Default: High Card
 	if (handValue == -1) {
-		handValue = 1;
-		handName = "High Card";
+		updateHandValue(getHighCard(), "High Card");
 	}
 }
 
-bool Hand::royalFlush()
+int Hand::getHighCard()
 {
-	return false;
+	int highVal = 0;
+	for (int i = 0; i < 7; i++) {
+		if (Stack[i].rank > highVal) highVal = Stack[i].rank;
+	}
+	return highVal;
 }
 
-bool Hand::straightFlush()
+void Hand::updateHandValue(int newVal, std::string newName)
 {
-	return false;
-}
-
-bool Hand::flush()
-{
-	return false;
-}
-
-bool Hand::straight()
-{
-	return false;
+	if (handValue < newVal) {
+		handValue = newVal;
+		handName = newName;
+	}
 }
 
 bool sortByRank(Card a, Card b)
