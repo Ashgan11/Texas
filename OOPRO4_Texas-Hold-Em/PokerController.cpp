@@ -45,7 +45,25 @@ void PokerController::playGame()
 		bettingRound();
 	}
 	if (model->getGameState() == 0) showDown();
-	view->displayWinner();
+	view->displayPotDistribution(model->distributePot());
+}
+
+bool PokerController::continueGame()
+{
+	while (true) {
+		try {
+			view->displayPromptContinueGame();
+			std::string input;
+			input = getInput();
+			inputToLower(input);
+			if (input == "yes") return true;
+			else if (input == "no") return false;
+			else throw std::exception("Please respond with either \"yes\" or \"no\"");
+		}
+		catch (std::exception& e) {
+			view->displayException(e);
+		}
+	}	
 }
 
 void PokerController::postBlinds()
@@ -65,6 +83,22 @@ void PokerController::postBlinds()
 void PokerController::bettingRound()
 {
 	while (!(model->allPlayersActed() && model->allWagersEqual()) && model->getGameState() == 0) {
+		switch (model->getRound()) {
+		case 1: {
+			(*model->getCommunityCard(0)).hidden = false;
+			(*model->getCommunityCard(1)).hidden = false;
+			(*model->getCommunityCard(2)).hidden = false;
+			break;
+		}
+		case 2: {
+			(*model->getCommunityCard(3)).hidden = false;
+			break;
+		}
+		case 3: {
+			(*model->getCommunityCard(4)).hidden = false;
+			break;
+		}
+		}
 		view->displayTable();
 		bettingRoundInput();
 	}
@@ -73,7 +107,13 @@ void PokerController::bettingRound()
 
 void PokerController::showDown()
 {
-	std::cout << "Showdown!";
+	model->showDown();
+
+	view->displayTable();
+
+	for (int i = 0; i < model->getPlayerNumber(); i++) {
+		view->displayFinalHand(i);
+	}
 }
 
 void PokerController::bettingRoundInput()
@@ -132,7 +172,7 @@ void PokerController::bettingRoundInput()
 
 std::string PokerController::getInput()
 {
-	if (model->getActivePlayer() != nullptr) std::cout << model->getActivePlayer()->getName() + " > ";
+	if (model->getActivePlayer() != nullptr && model->getGameState() == 0) std::cout << model->getActivePlayer()->getName() + " > ";
 	else std::cout << "> ";
 	std::string input;
 	std::getline(std::cin, input);

@@ -18,7 +18,7 @@ class Player
 private:
 	std::string name;
 
-	int chipsTotal = 0;
+	int chipsTotal = -1;
 	int chipsWager = 0;
 
 	Card hole[2];
@@ -36,10 +36,12 @@ public:
 	void addWager(int amount);
 	void revealHole();
 	void hideHole();
+	void receiveWinnings(int winnings);
 
 	//Setters
 	void setFlag(playerFlag newFlag);
 	void setHole(Card newHole[2]);
+	void resetWager();
 
 	//Getters
 	Card* getHole();

@@ -12,9 +12,13 @@ private:
 	PokerModel m;
 	PokerView v;
 	PokerController c;
+
 	Player players[10];
 
+	bool gameOn = true;
+
 	void shufflePlayers();
+	void rotatePlayers();
 public:
 	PokerGame();
 

@@ -1,11 +1,24 @@
 #include "Player.h"
 #pragma once
 
+struct playerHandPair {
+	Player* player;
+	Hand hand;
+	int oldIndex;
+
+	std::string toString();
+
+	bool operator < (playerHandPair& other);
+};
+
 //Model component. Handles the game logic.
 class PokerModel
 {
 private:
 	Player* players;
+	std::vector<Player*> winners;
+
+	std::vector<playerHandPair> finalHands;
 
 	Deck pokerDeck;
 
@@ -18,12 +31,16 @@ private:
 	int raisesCalled = 0;
 public:
 	PokerModel();
+	PokerModel(Player* players, int playerNumber);
 
 	//Gameplay
 	void distributeCards();
 	void checkFolds();
 	void advancePlayer();
 	void endRound();
+	void showDown();
+	int distributePot();
+	playerHandPair getPlayerHandPair(int index);
 
 	//Player Actions
 	void playerCall();
@@ -41,13 +58,15 @@ public:
 	//Getters
 	Player* getActivePlayer();
 	Player* getPlayers();
+	std::vector<Player*> getWinners();
 
-	Card getCommunityCard(int index);
+	Card* getCommunityCard(int index);
 
 	int getPlayerNumber();
 	int getGameState();
 	int getRound();
 	int getHighestBid();	
+	int getCurrentPot();
 
 	//Boolean Validations
 	bool allPlayersActed();

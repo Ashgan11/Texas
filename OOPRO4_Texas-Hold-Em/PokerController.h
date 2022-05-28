@@ -18,9 +18,9 @@ private:
 	
 	//Gameplay
 	void postBlinds();
-	void bettingRound();
-	void showDown();
+	void bettingRound();	
 	void bettingRoundInput();
+	void showDown();
 
 	//Input Acquisition
 	std::string getInput();	
@@ -36,4 +36,7 @@ public:
 	//Setup
 	void playerSetup(Player* players);
 	void playGame();
+
+	//Game Continuation
+	bool continueGame();
 };

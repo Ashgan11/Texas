@@ -4,6 +4,12 @@ PokerModel::PokerModel()
 {
 }
 
+PokerModel::PokerModel(Player* players, int playerNumber)
+{
+	this->players = players;
+	this->playerNumber = playerNumber;
+}
+
 void PokerModel::advancePlayer()
 {
 	getActivePlayer()->hideHole();
@@ -18,11 +24,73 @@ void PokerModel::endRound()
 	resetPlayerFlags();	
 }
 
+void PokerModel::showDown()
+{
+	for (int i = 0; i < playerNumber; i++) {
+		players[i].revealHole();
+		Card cardStack[7]{
+				communityCards[0],
+				communityCards[1],
+				communityCards[2],
+				communityCards[3],
+				communityCards[4],
+				players[i].getHole()[0],
+				players[i].getHole()[1]
+		};
+		Hand newHand(cardStack);
+		finalHands.push_back({ &players[i], newHand, i });
+	}
+
+	std::sort(finalHands.begin(), finalHands.end());
+
+	for (std::vector<playerHandPair>::iterator it = finalHands.begin(); it < finalHands.end(); it++) {
+		if (it->hand.getValue() == finalHands.back().hand.getValue()) {
+			winners.push_back(it->player);
+		}
+	}
+	if (winners.size()>1) {
+		gameState = -1;
+	}
+	else {		
+		gameState = finalHands.back().oldIndex;
+	}
+}
+
+int PokerModel::distributePot()
+{
+	int totalPot = 0;
+	for (int i = 0; i < playerNumber; i++) {
+		totalPot += players[i].getWager();
+		players[i].resetWager();
+	}
+	for (std::vector<Player*>::iterator it = winners.begin(); it < winners.end(); it++) {
+		(*it)->receiveWinnings(totalPot / winners.size());
+	}
+
+	//If the pot is not cleanly divisible, add the odd chip to the player closest to the "left" of the dealer
+	if (totalPot % winners.size()) {
+		(*winners.begin())->receiveWinnings(1);
+	}
+
+	return totalPot;
+}
+
+playerHandPair PokerModel::getPlayerHandPair(int index)
+{
+	return finalHands[index];
+}
+
 void PokerModel::distributeCards()
 {
+	//Testing set of fixed cards
+	//communityCards[0] = Card(Two, Spades);
+	//communityCards[1] = Card(Two, Hearts);
+	//communityCards[2] = Card(Four, Spades);
+	//communityCards[3] = Card(Five, Spades);
+	//communityCards[4] = Card(Six, Spades);
+
 	for (int i = 0; i < 5; i++) {
 		communityCards[i] = pokerDeck.dealCard();
-		//communityCards[i].hidden = false;
 	}
 	for (int i = 0; i < playerNumber; i++) {
 		Card newHole[2]{ pokerDeck.dealCard(),pokerDeck.dealCard() };
@@ -42,6 +110,7 @@ void PokerModel::checkFolds()
 	}
 	if (activePlayers == 1) {
 		gameState = winningIndex+1;
+		winners.push_back(&players[winningIndex]);
 	}
 }
 
@@ -77,7 +146,6 @@ void PokerModel::playerFold()
 void PokerModel::playerCheck()
 {
 	if (isCheckLegal()) {
-		//getActivePlayer()->setFlag(Finished);
 		advancePlayer();
 	}
 	else throw std::exception("You cannot check when someone else has already pitched a wager this round!");
@@ -121,9 +189,14 @@ Player* PokerModel::getPlayers()
 	return players;
 }
 
-Card PokerModel::getCommunityCard(int index)
+std::vector<Player*> PokerModel::getWinners()
 {
-	if (index < 5 && index >= 0) return communityCards[index];
+	return winners;
+}
+
+Card* PokerModel::getCommunityCard(int index)
+{
+	if (index < 5 && index >= 0) return &communityCards[index];
 	else throw std::exception("Bad access to communityCards!");
 }
 
@@ -149,6 +222,15 @@ int PokerModel::getHighestBid()
 		if (players[i].getWager() > highBid) highBid = players[i].getWager();
 	}
 	return highBid;
+}
+
+int PokerModel::getCurrentPot()
+{
+	int totalPot = 0;
+	for (int i = 0; i < playerNumber; i++) {
+		totalPot += players[i].getWager();
+	}
+	return totalPot;
 }
 
 Player* PokerModel::getActivePlayer()
@@ -182,4 +264,14 @@ bool PokerModel::isCheckLegal()
 		if (players[i].getFlag() == Finished) return false;
 	}
 	return true;
+}
+
+std::string playerHandPair::toString()
+{
+	return player->getName() + ": " + hand.getName() + "(" + std::to_string(hand.getValue()) + ")";
+}
+
+bool playerHandPair::operator<(playerHandPair& other)
+{
+	return hand.getValue() < other.hand.getValue();
 }

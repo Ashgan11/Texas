@@ -40,6 +40,11 @@ void Player::hideHole()
 	hole[1].hidden = true;
 }
 
+void Player::receiveWinnings(int winnings)
+{
+	chipsTotal += winnings;
+}
+
 void Player::setFlag(playerFlag newFlag)
 {
 	if (flag != Fold && chipsTotal != 0) flag = newFlag;
@@ -49,8 +54,11 @@ void Player::setHole(Card newHole[2])
 {
 	hole[0] = newHole[0];
 	hole[1] = newHole[1];
-	//hole[0].hidden = false;
-	//hole[1].hidden = false;
+}
+
+void Player::resetWager()
+{
+	chipsWager = 0;
 }
 
 Card* Player::getHole()
