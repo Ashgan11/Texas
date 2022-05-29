@@ -40,6 +40,7 @@ public:
 
 	//Setters
 	void setFlag(playerFlag newFlag);
+	void resetFlag();
 	void setHole(Card newHole[2]);
 	void resetWager();
 

@@ -68,16 +68,11 @@ bool PokerController::continueGame()
 
 void PokerController::postBlinds()
 {
+	model->resetPlayerFlags();
 	//Change order if heads-up game
-	if (model->getPlayerNumber() == 2) {
-		model->advancePlayer();
-		model->playerRaise(1);
-		model->playerRaise(2);
-	}
-	else {
-		model->playerRaise(1);
-		model->playerRaise(2);
-	}
+	if (model->getPlayerNumber() == 2) model->advancePlayer();
+	model->playerRaise(1);
+	model->playerRaise(2);
 }
 
 void PokerController::bettingRound()

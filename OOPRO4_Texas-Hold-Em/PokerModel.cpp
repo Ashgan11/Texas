@@ -177,7 +177,7 @@ void PokerModel::resetPlayerFlags()
 {
 	//Set everyone's flag to unfinished (unless they folded)
 	for (int i = 0; i < playerNumber; i++) {
-		players[i].setFlag(Unfinished);
+		players[i].resetFlag();
 	}
 
 	//Reset table activation order at end of round

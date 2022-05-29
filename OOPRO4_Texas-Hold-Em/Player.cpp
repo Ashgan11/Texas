@@ -50,6 +50,11 @@ void Player::setFlag(playerFlag newFlag)
 	if (flag != Fold && chipsTotal != 0) flag = newFlag;
 }
 
+void Player::resetFlag()
+{
+	flag = Unfinished;
+}
+
 void Player::setHole(Card newHole[2])
 {
 	hole[0] = newHole[0];

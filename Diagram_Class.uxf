@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1639</x>
+      <y>847</y>
+      <w>121</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+Rank
+-
+Two = 2,
+Three,
+Four,
+..
+Ace</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1782</x>
+      <y>847</y>
+      <w>121</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+Suit
+-
+Hearts,
+Clubs,
+Spades,
+Diamonds</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1639</x>
+      <y>1089</y>
+      <w>297</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>Card
+-
++rank: Rank
++suit: Suit
++hidden: bool
+-
++Card()
++Card(Rank r, Suit s)
++Card(Rank r, Suit s, bool hidden)
++Card(int r, int s)
+
++toString(): string
+
++operator &lt; (Card const&amp; other)
++operator == (int const&amp; other)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2101</x>
+      <y>1089</y>
+      <w>297</w>
+      <h>209</h>
+    </coordinates>
+    <panel_attributes>Deck
+-
+-Stack: Card[52]
+-deckSize: int
+-seed: unsigned int
+-
++Deck()
+
++toString(): string
+
++Shuffle(): void
++dealCard(): Card</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1639</x>
+      <y>1441</y>
+      <w>396</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Hand
+-
+-Stack: std::array&lt;Card, 7&gt;
+-handName: string
+-handValue: int
+-
+-evaluateHand(): void
+-getHighCard(): int
+-updateHandValue(int newVal, string newName): void
++Hand(Card inputStack[7])
++getValue(): int
++getName(): string
++toString(): string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1925</x>
+      <y>1133</y>
+      <w>198</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1826</x>
+      <y>1342</y>
+      <w>33</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1683</x>
+      <y>990</y>
+      <w>33</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1837</x>
+      <y>990</y>
+      <w>33</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1188</x>
+      <y>99</y>
+      <w>297</w>
+      <h>605</h>
+    </coordinates>
+    <panel_attributes>Player
+-
+-name: string
+
+-chipsTotal: int
+-chipsWager: int
+
+-hole: Card[2]
+
+-flag: playerFlag
+
+-hand: Hand*
+-
++Player()
++Player(string n, int s)
+
++toString(): string
+
++addWager(int amount): void
++revealHole(): void
++hideHole(): void
++receiveWinnings(int winnings): void
+
++setFlag(playerFlag newFlag): void
++resetFlag(): void
++setHole(Card newHole[2]): void
++resetWager()
+
++getHole(): Card*
++getFlag(): playerFlag
++getWager(): int
++getStack(): int
+
++getName(): string
++hasPlayerActed(): bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1606</x>
+      <y>99</y>
+      <w>121</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+playerFlag
+-
+Unfinished,
+Finished,
+Fold</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1474</x>
+      <y>154</y>
+      <w>154</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>231</x>
+      <y>759</y>
+      <w>352</w>
+      <h>385</h>
+    </coordinates>
+    <panel_attributes>PokerController
+-
+-model: PokerModel*
+-view: PokerView*
+-
+-postBlinds(): void
+-bettingRound(): void
+-bettingRoundInput(): void
+-showDown(): void
+
+-getInput(): string
+-convertInput(string input): int
+-inputToLower(string &amp;input): void
+
+-isNumber(const string s): bool
+
++PokerController(PokerModel* m, PokerView* v)
+
++playerSetup(Player* players): void
++playGame(): void
+
++continueGame(): bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>451</y>
+      <w>187</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>PokerGame
+-
+-m: PokerModel
+-v: PokerView
+-c: PokerView
+
+-players: Player[10]
+
+-gameOn: bool
+-
+-shufflePlayers(): void
+-rotatePlayers(): void
+-
++PokerGame()
++playGame(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>715</x>
+      <y>759</y>
+      <w>363</w>
+      <h>924</h>
+    </coordinates>
+    <panel_attributes>PlayerModel
+-
+-players: Player*
+-winners: std::vector&lt;Player*&gt;
+-finalHands: std::vector&lt;playerHandPair&gt;
+
+-pokerDeck: Deck
+
+-communityCards: Card[5]
+
+-playerNumber: int
+-gameState: int
+-round: int
+-activePlayer: int
+-raisesCalled: int
+-
++PokerModel()
++PokerModel(Player* players, int playerNumber)
+
++distributeCards(): void
++checkFolds(): void
++advancePlayer(): void
++endRound(): void
++showDown(): void
++distributePot(): int
++getPlayerHandPair(int index): playerHandPair
+
++playerCall(): void
++playerRaise(int amount): void
++playerFold(): void
++playerCheck(): void
++playerPeek(): void
++playerAllIn(): void
+
++setPlayers(Player* p): void
++setPlayerNumber(int n): void
++resetPlayerFlags(): void
+
++getActivePlayer(): Player* p
++getPlayers(): Player*
++getWinners(): std::vector&lt;Player*&gt;
+
++getCommunityCard(int index): Card*
+
++getPlayerNumber(): int
++getGameState(): int
++getRound(): int
++getHighestBid(): int
++getCurrentPot(): int
+
++allPlayersActed(): bool
++allWagersEqual(): bool
++isCheckLegal(): bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1188</x>
+      <y>759</y>
+      <w>297</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Struct&gt;&gt;
+playerHandPair
+-
+player: Player*
+hand: Hand
+oldIndex: int
+
+toString(): string
+
+operator &lt; (playerHandPair&amp; other): bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>231</x>
+      <y>1320</y>
+      <w>352</w>
+      <h>363</h>
+    </coordinates>
+    <panel_attributes>PokerView
+-
+-model: PokerModel*
+-
++Pokerview(PokerModel* m)
+
++displayStart(): void
+
++displayPromptPlayerNumber(): void
++displayPromptPlayerName(): void
++displayPromptContinueGame(): void
+
++displayTable(): void
++displayOptions(): void
+
++displayFinalHand(int index): void
++displayPotDistribution(int totalPot): void
++displayWinner(): void
++displayFinalTally(): void
+
++displayException(exception e): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1067</x>
+      <y>836</y>
+      <w>143</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>572</x>
+      <y>836</y>
+      <w>165</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>572</x>
+      <y>1485</y>
+      <w>165</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>1133</y>
+      <w>33</w>
+      <h>209</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>176</x>
+      <y>517</y>
+      <w>748</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;660.0;10.0;660.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>176</x>
+      <y>561</y>
+      <w>253</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;210.0;10.0;210.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>77</x>
+      <y>704</y>
+      <w>176</w>
+      <h>891</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;790.0;140.0;790.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>176</x>
+      <y>473</y>
+      <w>1034</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;920.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>979</x>
+      <y>517</y>
+      <w>231</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>190.0;10.0;10.0;10.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1331</x>
+      <y>693</y>
+      <w>33</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1320</x>
+      <y>924</y>
+      <w>341</w>
+      <h>671</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;590.0;290.0;590.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>1287</y>
+      <w>1441</w>
+      <h>594</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;360.0;10.0;520.0;1290.0;520.0;1290.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1067</x>
+      <y>1188</y>
+      <w>594</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;520.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1474</x>
+      <y>385</y>
+      <w>187</w>
+      <h>792</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0;80.0;700.0;150.0;700.0</additional_attributes>
+  </element>
+</diagram>

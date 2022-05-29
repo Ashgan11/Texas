@@ -224,7 +224,7 @@ void Hand::evaluateHand()
 			Stack[2].rank == 14 && Stack[6].rank == 5) {
 			straight = 1;
 		}
-		if (straight && handValue < 5) {
+		if (straight) {
 			updateHandValue(Stack[highIndex].rank + 58, "Straight");
 		}
 	}
